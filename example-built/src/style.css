@@ -1,0 +1,11 @@
+body {
+  font-family: system-ui, sans-serif;
+  max-width: 40rem;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+output {
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
