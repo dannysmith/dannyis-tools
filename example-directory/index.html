@@ -3,15 +3,25 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Example: directory</title>
+    <title>Example: Directory Tool</title>
+    <meta name="description" content="Count up and down with a counter made from plain HTML, CSS and JavaScript. It only exists as an example of a tool that lives in its own directory." />
+    <link rel="icon" href="images/icon.svg" />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Directory example</h1>
-    <p>A tool with its own CSS, JavaScript, images and a <a href="about.html">second page</a>.</p>
-    <img src="images/boat.svg" alt="A small sailing boat" width="160" height="160" />
-    <img src="images/gradient.png" alt="A colour gradient" width="240" height="120" />
-    <p><button type="button">Clicked 0 times</button></p>
+    <main>
+      <img src="images/icon.svg" alt="" width="48" height="48" />
+      <h1>Counter</h1>
+      <output>0</output>
+      <div class="buttons">
+        <button type="button" data-step="-1" aria-label="Decrease">−</button>
+        <button type="button" data-reset>Reset</button>
+        <button type="button" data-step="1" aria-label="Increase">+</button>
+      </div>
+      <p class="note">
+        This tool only exists as an example. It shows how a tool with no build step is laid out: a directory with an <code>index.html</code> and its own CSS, JavaScript and images, published exactly as it is. See the <a href="https://github.com/dannysmith/dannyis-tools/tree/main/example-directory">source on GitHub</a>.
+      </p>
+    </main>
     <script type="module" src="script.js"></script>
   </body>
 </html>

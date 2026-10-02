@@ -1,6 +1,6 @@
 # dannyis-tools
 
-Small, self-contained web tools published at <https://tools.danny.is/>. Read `README.md` for the three shapes a tool can take and how the home page gets its metadata.
+Small, self-contained web tools published at <https://tools.danny.is/>. Read `README.md` for the three shapes a tool can take and how the home page gets its metadata. `example-directory/` and `example-build-step/` are working examples to copy from.
 
 ## Building a tool
 

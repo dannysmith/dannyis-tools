@@ -14,6 +14,8 @@ A tool takes one of three shapes, which all look the same from the outside.
 | Directory       | `name/` containing an `index.html`             | The whole directory         |
 | With build step | `name/` with a `build` script in `package.json` | `name/dist/` after building |
 
+`example-directory/` and `example-build-step/` are working examples of the last two shapes: the same counter, once in plain HTML, CSS and JavaScript and once in React and TypeScript.
+
 Build steps are run with `bun install` then `bun run build`, and must produce `dist/index.html`. Use relative URLs inside a tool, because it's served from `/name/` and not the domain root. Anything starting with `.` or `_` is ignored.
 
 ## What the home page shows

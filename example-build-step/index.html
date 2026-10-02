@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Example: Tool with a Build Step</title>
+    <meta name="description" content="Count up and down with a counter written in React and TypeScript. It only exists as an example of a tool which is bundled by a build step before it's published." />
+    <link rel="stylesheet" href="./src/style.css" />
+  </head>
+  <body>
+    <main>
+      <h1>Counter</h1>
+      <div id="root"></div>
+      <p class="note">
+        This tool only exists as an example. It shows how a tool with a build step is laid out: a directory with a <code>package.json</code> whose <code>build</code> script bundles the React and TypeScript source into <code>dist/</code>, which is what gets published. See the <a href="https://github.com/dannysmith/dannyis-tools/tree/main/example-build-step">source on GitHub</a>.
+      </p>
+    </main>
+    <script type="module" src="./src/main.tsx"></script>
+  </body>
+</html>

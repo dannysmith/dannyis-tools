@@ -1,0 +1,11 @@
+{
+  "name": "example-build-step",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && bun build ./index.html --outdir dist --production"
+  },
+  "dependencies": {
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  }
+}

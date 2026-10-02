@@ -1,7 +1,0 @@
-{
-  "name": "example-built",
-  "private": true,
-  "scripts": {
-    "build": "bun build ./index.html --outdir dist"
-  }
-}

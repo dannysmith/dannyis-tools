@@ -1,7 +1,13 @@
-const button = document.querySelector("button");
-let clicks = 0;
+const output = document.querySelector("output");
+let count = 0;
 
-button.addEventListener("click", () => {
-  clicks += 1;
-  button.textContent = `Clicked ${clicks} times`;
-});
+function setCount(value) {
+  count = value;
+  output.textContent = count;
+}
+
+for (const button of document.querySelectorAll("[data-step]")) {
+  button.addEventListener("click", () => setCount(count + Number(button.dataset.step)));
+}
+
+document.querySelector("[data-reset]").addEventListener("click", () => setCount(0));
