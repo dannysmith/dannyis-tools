@@ -1,12 +1,8 @@
 {
   "name": "dannyis-tools",
   "private": true,
-  "type": "module",
   "scripts": {
     "build": "bun build.ts",
     "serve": "bun serve.ts"
-  },
-  "devDependencies": {
-    "@types/bun": "latest"
   }
 }

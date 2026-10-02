@@ -22,10 +22,6 @@ type Tool = {
   added: string | null;
 };
 
-function escapeHtml(text: string): string {
-  return text.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;").replaceAll('"', "&quot;");
-}
-
 // Reads <title> and <meta name="description"> from an HTML file. HTMLRewriter
 // hands back the raw source text, so entities like &amp; are still encoded.
 async function readHtmlMeta(path: string): Promise<{ title: string; description: string }> {
@@ -55,7 +51,7 @@ async function readReadmeDescription(path: string): Promise<string> {
     .split(/\n\s*\n/)
     .map((block) => block.trim())
     .find((block) => block && !block.startsWith("#"));
-  return escapeHtml((paragraph ?? "").replace(/\s+/g, " "));
+  return Bun.escapeHTML((paragraph ?? "").replace(/\s+/g, " "));
 }
 
 // Date of the oldest commit touching `path`. Needs full git history, so CI must not use a shallow clone.
@@ -84,7 +80,8 @@ async function buildDirectoryTool(dir: string): Promise<Tool | null> {
   }
   if (!(await Bun.file(`${source}/index.html`).exists())) return null;
 
-  await cp(source, `${OUT}/${dir}`, { recursive: true });
+  // Refusing to overwrite makes the build fail if name.html and name/ both exist.
+  await cp(source, `${OUT}/${dir}`, { recursive: true, errorOnExist: true, force: false });
   const meta = await readHtmlMeta(`${source}/index.html`);
   return {
     slug: dir,
@@ -198,13 +195,13 @@ await mkdir(OUT);
 
 const tools: Tool[] = [];
 for (const entry of await readdir(".", { withFileTypes: true })) {
-  if (/^[._]/.test(entry.name) || entry.name === "node_modules") continue;
-  const isFileTool = entry.isFile() && entry.name.endsWith(".html");
-  if (!isFileTool && !entry.isDirectory()) continue;
-  if (tools.some((other) => other.slug === entry.name.replace(/\.html$/, ""))) {
-    throw new Error(`"${entry.name}" clashes with another tool of the same name`);
-  }
-  const tool = isFileTool ? await buildFileTool(entry.name) : await buildDirectoryTool(entry.name);
+  if (/^[._]/.test(entry.name)) continue;
+  const tool =
+    entry.isFile() && entry.name.endsWith(".html")
+      ? await buildFileTool(entry.name)
+      : entry.isDirectory()
+        ? await buildDirectoryTool(entry.name)
+        : null;
   if (tool) tools.push(tool);
 }
 
