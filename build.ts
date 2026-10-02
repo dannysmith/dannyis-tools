@@ -181,7 +181,7 @@ function renderIndex(tools: Tool[]): string {
       <img src="https://danny.is/avatar.jpg" alt="Danny Smith" width="64" height="64" />
       <h1>Danny's Tools and Mini-sites</h1>
     </header>
-    <p>A collection of one-off HTML and JavaScript tools and single-page mini-sites, each made for a specific use case. Most of them are vibe-coded with AI. You can find the rest of my stuff at <a href="https://danny.is">danny.is</a>.</p>
+    <p>A collection of one-off HTML and JavaScript tools and single-page mini-sites, each made for a specific use case. Most of them are vibe-coded with AI, and the source is <a href="https://github.com/dannysmith/dannyis-tools">on GitHub</a>. You can find the rest of my stuff at <a href="https://danny.is">danny.is</a>.</p>
     <ul>
 ${tools.map(renderTool).join('\n')}
     </ul>
