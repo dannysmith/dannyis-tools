@@ -1,0 +1,627 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tackles, yards and belaying: rigging a 74</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fundamentals.css">
+</head>
+<body>
+  <nav id="site"></nav>
+  <header class="masthead">
+    <div>
+      <h1>Tackles, yards and belaying</h1>
+      <p class="series">The running rigging of a 74-gun ship, about 1805</p>
+      <p class="standfirst">The building blocks, before the line-by-line detail: how a tackle multiplies a pull, how each yard hangs on its mast, what a rope was made fast to when it reached the deck, and who hauled on it. Period words are explained as they come up and collected in <a href="glossary.html">the glossary</a>.</p>
+    </div>
+    <ol class="contents">
+      <li><a href="#tackles">A tackle trades distance for force</a></li>
+      <li><a href="#why">Why a line got the purchase it did</a></li>
+      <li><a href="#yards">How a yard is held up, held in and hoisted</a></li>
+      <li><a href="#belaying">Belaying is turns round something fixed</a></li>
+      <li><a href="#men">How many men hauled on what</a></li>
+    </ol>
+  </header>
+
+  <main class="fund">
+
+    <!-- 1 ------------------------------------------------------------------>
+    <section class="topic" id="tackles">
+      <header>
+        <p class="topic-no">One</p>
+        <h2>A tackle trades distance for force</h2>
+        <p>Almost every rope in the ship that does heavy work has a tackle somewhere along it. David Steel, whose <i>Elements and Practice of Rigging and Seamanship</i> of 1794 is the main source for this page, calls a tackle “a machine formed by the connection of a rope or fall, with an assemblage of blocks”. The men haul a long way with a light pull, and the weight moves a short way with a heavy one.</p>
+      </header>
+
+      <div class="pair">
+        <figure class="fig">
+          <svg id="fig-parts" role="img" aria-label="A luff tackle with its parts named"></svg>
+          <figcaption><b>A luff tackle</b>, the commonest purchase in the ship: a double block made fast aloft, a single block hooked to the weight.</figcaption>
+        </figure>
+        <div class="text">
+          <h3>The rope of a tackle has three named parts</h3>
+          <p>The rope is the <a href="glossary.html#fall">fall</a>. One end of it is made fast to one of the blocks, and Steel names the parts from there: “That part of the fall which is fastened to one of the blocks, is called the <b>standing-part</b>, and the other parts of it are called the <b>running-part</b>.” The end the men take hold of is the <b>leading-part</b>, “that part of a tackle which is hauled upon”.</p>
+          <p>“Fall” was also used loosely for that loose end alone. Steel says so himself: “The rope that connects the blocks of a tackle; but the fall sometimes implies only the loose part which is pulled upon.” Darcy Lever, in <i>The Young Sea Officer’s Sheet Anchor</i> (1808), labels a gun-tackle purchase in just that way: “the standing Part, because it is fixed”, “the running part”, and “the Fall, or part hauled upon”.</p>
+          <p>In the rest of this tutorial “standing part” is the fixed end of any rope and “leading part” the end that is hauled on, whether or not there is a tackle in between.</p>
+          <p class="refs"><b>Sources.</b> Steel p.176 (tackle, standing and running part), Steel p.168 (leading-part), Steel p.166 (fall); Lever, the page headed “Blocks, Tackles”, about p.15 (the page number cannot be read in the scan).</p>
+        </div>
+      </div>
+
+      <div class="pair" id="worked">
+        <figure class="fig">
+          <svg role="img" aria-label="The chosen tackle, with the parts at the moving block counted"></svg>
+          <figcaption></figcaption>
+        </figure>
+        <div class="text">
+          <h3>Count the ropes that hold the weight</h3>
+          <p>Steel’s rule for the power of a tackle needs no arithmetic beyond counting:</p>
+          <blockquote>
+            <p>“Its power will be, the friction not considered, as the number of parts of the fall that are applied to sustain the weight.”</p>
+            <footer>Steel, 1794, p.176</footer>
+          </blockquote>
+          <p>His example is the luff tackle. With the weight on the double block “there will be four parts of the fall… suppose the weight hung to the double block be four hundred, then one hundred applied to the hauling part of the fall will suspend it”. Turn the same tackle end for end and hook the weight to the single block, and “it would have rested on three ropes only”.</p>
+          <p>Choose a purchase, choose which way up it is rove, and raise the weight. Every foot the weight rises takes a foot out of each of the counted parts, so the fall has to be hauled that many feet.</p>
+
+          <p class="picker-label">Purchase</p>
+          <div class="picker purchases"></div>
+          <p class="picker-label">Rove which way</p>
+          <div class="picker variants"></div>
+          <label class="haul">Raise the weight
+            <input type="range" min="0" max="100" value="0" aria-label="Raise the weight">
+          </label>
+          <div class="readout" aria-live="polite"></div>
+          <div class="about-purchase"></div>
+        </div>
+      </div>
+
+      <div class="pair">
+        <figure class="fig">
+          <svg id="fig-tye" role="img" aria-label="A topsail tye and its halliards"></svg>
+          <figcaption><b>One side of a topsail yard’s tye and halliards.</b> The thick tye does the work aloft; the lighter halliards at its lower end are what the men haul. The block at the topmast head is fixed and only turns the lead.</figcaption>
+        </figure>
+        <div class="text">
+          <h3>A fixed block gives nothing, and friction takes its share</h3>
+          <p>Only blocks that move with the weight add power. Steel is blunt about the others: fixed blocks “are only for the convenience of turning the direction of the fall, they add nothing to the power of the purchase, but, on the contrary, destroy so much as is necessary to overcome their friction”. The leading blocks at the foot of a mast, the sheaves in the bitts and the blocks under the tops are all of this kind. They bring the rope to where a line of men can walk away with it, and they cost effort.</p>
+          <p>A tackle, he adds, is “subject to much friction”. Stiff rope bent round small sheaves eats the advantage, and the more sheaves the worse. So every figure on this page is nominal: the real gain is always less. That is why Steel prefers two whips to a double and single block where either will do. They give “the same purchase… and with much less friction”.</p>
+
+          <h3 style="margin-top:2rem">Thick rope aloft, a light tackle on deck</h3>
+          <p>Four more words explain how most heavy leads are put together. In each, a stout rope takes the load where the load is, and a tackle of lighter rope is put on its other end where the men are.</p>
+          <ul>
+            <li>A <b>pendent</b> is a short heavy rope with a block or tackle at one end, which serves “to transmit the effort of their tackles to some other object”. Brace pendents, truss pendents, reef-tackle pendents and yard-tackle pendents are all of this kind.</li>
+            <li>A <b>runner</b> is “a single rope, connected with a tackle, which transmits its effort the same as if the tackle was the whole length”.</li>
+            <li>A <b>tye</b> (later spelt tie) is “a sort of runner, or large rope, used to convey the effort of the tackle to hoist the upper yards and gaff”. The drawing shows one.</li>
+            <li>A <b>span</b> is a short rope with a block or thimble at each end, hitched round a mast, cap or stay “to lead ropes through”. It is a way of hanging a leading block where there is nothing else to hang it from.</li>
+          </ul>
+          <p class="refs"><b>Sources.</b> Steel p.176–177 (the rule, the worked example, fixed blocks, friction), Steel p.180 (whip upon whip), Steel p.171 (pendent), Steel p.173 (runner), Steel p.179 (tye), Steel p.174 (span), Steel p.205 and Lever p.38 (the topsail tye and halliards). The advantage of about 8 a side is counted from that lead by Steel’s rule; neither author states it.</p>
+        </div>
+      </div>
+
+      <div class="wide">
+        <div class="text">
+          <h3>The purchases Steel and Lever name</h3>
+          <p>Each is drawn with its blocks made fast as the first choice in the worked tackle above. The advantage is nominal and, except where Steel works it himself, is counted from his rule.</p>
+        </div>
+        <div class="gallery" id="gallery"></div>
+        <div class="text" style="margin-top:28px">
+          <h4>Names that do not belong</h4>
+          <p>“Jeer tackle” is not a kind of tackle in Steel or Lever. Jeers (they both write “jears”) are simply the particular purchase that hoists a lower yard. The generic family is the list above: whip, whip upon whip, gun-tackle purchase, luff tackle, jigger or tail tackle, burton, runner and tackle, long tackle, winding tackle.</p>
+          <p>Steel and Lever do not use “handy billy”, “Spanish burton” or “watch tackle”. Those names are met in later seamanship books and are left out of this tutorial.</p>
+          <p class="refs"><b>Sources.</b> As given on each card. The table of purchases is compiled from Steel p.176–180 and Lever’s “Blocks, Tackles” page, with Falconer’s <i>Dictionary</i> (1769) under WHIP and BURTON.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2 ------------------------------------------------------------------>
+    <section class="topic" id="why">
+      <header>
+        <p class="topic-no">Two</p>
+        <h2>Why a line got the purchase it did</h2>
+        <p><span class="mark infer">inference</span> Neither Steel nor Lever argues this out as a principle. What follows is the pattern in the leads they describe. It is consistent, but it is a reading of their leads and not something either of them says.</p>
+      </header>
+
+      <div class="pair">
+        <figure class="fig">
+          <svg id="fig-gear" role="img" aria-label="Rope size against purchase for the gear of the main mast"></svg>
+          <figcaption><b>Gear of a 74’s main mast.</b> Each rope is drawn at a thickness in proportion to its size. The red bars are the parts that take the load. Sizes are circumferences from Steel’s table for a 74, read from a poor scan; the counts of parts are worked from his leads and are inference.</figcaption>
+        </figure>
+        <div class="text">
+          <h3>The heavier the steady load, the thicker the rope; the further it has to travel, the less purchase</h3>
+          <p>Purchase costs speed. A rope rove with an advantage of four has to be hauled four times as far, and when it is let go it has to run back through all its blocks. So the rig gives each line only as much purchase as it cannot do without.</p>
+          <ul>
+            <li><b>Light gear that must run fast is single.</b> Topgallant braces and lifts, royal halliards, bowlines, and the buntlines of topsails.</li>
+            <li><b>Gear that lifts a clew against a full sail is doubled once at the clew.</b> Clew-garnets on the courses and clew-lines on the topsails have a block at the clew and the standing part made fast on the yard.</li>
+            <li><b>Gear that lifts a whole yard has a tye or jeers, and a tackle on that.</b> A lower yard has jeers of five parts each side. A topsail yard has a tye and halliards, about eight to one each side.</li>
+            <li><b>Gear that holds a very great steady load is thick rope with little or no purchase.</b> Tacks and sheets are cable-laid rope, single or doubled once. The main tack of a 74 is the thickest running rope on the mast, 9½ inches round, and has no blocks at all in Steel’s table. Such a rope is hove down by many men, with a tackle clapped on if need be, and is held by a <a href="#stoppers">stopper</a> while it is belayed.</li>
+          </ul>
+          <p>The topsail sheet shows the last rule at its plainest. It is a single rope 8½ inches round with no purchase whatever: from the clew down to the lower yard-arm, in along the yard, and down the mast to the bitts. The strength is in the rope and the men.</p>
+          <p>For where each of these lines goes, see <a href="square-sails.html">The square sails</a>.</p>
+          <p class="refs"><b>Sources.</b> The pattern is the research notes’ inference from Steel p.202–213 and Lever p.33–58. Rope sizes from Steel’s table of rigging for a 74-gun ship, table pages 34–36 (<a href="https://maritime.org/doc/steel/">page images at maritime.org</a>); a fraction may be misread. Steel p.212 and Lever p.54 for the topsail sheet; Steel p.211 for the main tack.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 ------------------------------------------------------------------>
+    <section class="topic" id="yards">
+      <header>
+        <p class="topic-no">Three</p>
+        <h2>How a yard is held up, held in and hoisted</h2>
+        <p>The four yards on a mast are held in four different ways, because they are used differently. The lower yard is hoisted once and stays put. The topsail yard goes up and down its mast every time sail is made, reefed or taken in. The topgallant yard is sent down on deck altogether when it blows. The royal yard is not rigged aloft at all.</p>
+      </header>
+
+      <div class="pair">
+        <figure class="fig">
+          <svg id="fig-yards" class="fd-yards" role="img" aria-label="The main mast from astern with the gear that holds each yard, numbered"></svg>
+          <figcaption><b>The main mast of the 74 from astern</b>, sails set, gear of the starboard side only. Ropes that lie against the mast are drawn a little apart. <span class="key"><i class="k-dot"></i> belayed where Steel says</span> <span class="key"><i class="k-ring"></i> fitting not named; my inference</span> <span class="key"><i class="k-fast"></i> made fast</span></figcaption>
+        </figure>
+        <div class="text">
+          <h3>The lower yard hangs in slings and is hoisted by jeers</h3>
+          <ol class="lead">
+            <li><b>Jeers</b> hoist the yard. “Jears, in large ships, are two large tackle.” A treble block is lashed each side of the lower mast-head and a double block on the yard each side of the middle; “the blocks, at the mast-head and on the yard, are connected by their falls, which lead upon deck”. A 74’s main jeers are 8-inch rope. Lever says the falls “are stretched aft: and the Yard is swayed up by them”. Neither author says where the falls belay; the jeer bitts are the reading of the name, and are drawn as a guess.</li>
+            <li><b>Slings</b> carry the yard once it is up. A strap round the middle of the yard is laced by a laniard to slings that go round the mast-head. Then “the Jears or Tackles, are then eased off, and the Yard hangs by the Slings”. So in ordinary service the jeers are slack. “In time of action, the yards are slung with chains.”</li>
+            <li><b>Truss pendents</b> hold the yard in to the mast. They pass round yard and mast, and a tackle on each lets the yard “move from, or confine it strictly to, the mast”: slack to brace sharp up, taut to steady the yard. Steel (1794) leads the truss tackles to eye-bolts in the deck, as drawn. Lever says that lead “is generally exploded: they now lead up to the lower Tressle-trees or Topmast-Cap”. A <b>nave-line</b> under the top holds the pendents up level with the yard.</li>
+            <li><b>Lifts</b> run from the cap to each yard-arm. They square the yard, top one end above the other, and take the weight of the men when they lie out on it.</li>
+          </ol>
+          <p>Round the mast under the yard are the <b>puddening</b> and <b>dolphin</b>, a thick wreath of rope “to sustain the weight of the yards, if an accident happens to the rigging”.</p>
+
+          <h3 style="margin-top:2rem">The topsail yard travels on a tye and is held by a parrel</h3>
+          <ol class="lead" style="counter-reset: step 4">
+            <li><b>The tye</b> (tie). In large ships there are two. Each has its standing part round the topmast head, goes down through a double block on the yard, up through a block at the mast-head and down abaft the mast.</li>
+            <li><b>The halliards</b> (Steel: haliards; later halyards). A block is spliced into the lower end of each tye, which Lever calls the fly-block, and the halliards are rove “like a Luff Tackle” between it and a single block hooked to a swivel eye-bolt in the channel. The leading part comes in through a block at the side. So the halliards come down outside the ship, one pair each side. Steel names no fitting for the belay.</li>
+            <li><b>The parrel</b> (Steel and Lever: parral) holds the yard to the topmast and lets it slide. It is a collar of ropes rove through a set of wooden ribs and trucks. “Sufficient play must be left for the Yards to brace sharp up.”</li>
+            <li><b>Lifts</b>, through a sister block seized in the topmast shrouds, down the side of the mast, belayed “to the dead-eyes in the lower shrouds”.</li>
+          </ol>
+
+          <h3 style="margin-top:2rem">The topgallant yard is sent up and down</h3>
+          <ol class="lead" style="counter-reset: step 8">
+            <li><b>A single tye</b> “reeves through the sheave-hole in the hounds of the topgallant-mast, and clinches round the yard in the slings”. Its halliards are a double block in the tye and a single block at the lower trestle-trees, and belay “round the cross-piece of the bits abaft the mast”. The parrel is a light one.</li>
+            <li><b>The jack-block</b> is buttoned round the topgallant mast when the yard is to come down, and a <b>yard-rope</b> (top-rope) rove through it. The yard is unrigged aloft, canted on end and lowered to the deck, kept to windward by a traveller on the topmast backstay. Lever notes that “frequently the Tye and Halliards are in one”, toggled so that the same rope serves as the yard-rope.</li>
+          </ol>
+
+          <h3 style="margin-top:2rem">The royal is set flying</h3>
+          <ol class="lead" style="counter-reset: step 10">
+            <li><b>Halliards only.</b> “Royals are set flying. The haliards hitch round the slings of the yard, and through the sheave-hole in the topgallant-mast-head, and lead down upon deck.” The yard is hoisted from the deck each time the sail is set.</li>
+            <li><b>The clews are lashed</b> to the topgallant yard-arms. Lever: “The Royal Yards are seldom rigged across”; set flying they have “neither Lifts nor Braces, (though sometimes the latter)”. Steel’s table for a 74 has no royal gear at all.</li>
+          </ol>
+          <p>The lines that work each yard and its sail are traced one at a time in <a href="square-sails.html">The square sails</a>.</p>
+          <p class="refs"><b>Sources.</b> Steel p.203 and Lever p.34–35 (jeers); Steel p.204 and Lever p.35–37 (slings, truss pendents, nave-line); Steel p.233 (puddening and dolphin); Steel p.205 and Lever p.38–39 (topsail tye, halliards, parrel); Steel p.204 (topsail lifts); Steel p.206, Steel p.213–214 and Lever p.47–48, Lever p.86 (topgallant yard, jack-block); Steel p.214, Steel p.166 and Lever p.58 (royals). Heights in the drawing are the tutorial’s estimates.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4 ------------------------------------------------------------------>
+    <section class="topic" id="belaying">
+      <header>
+        <p class="topic-no">Four</p>
+        <h2>Belaying is turns round something fixed</h2>
+        <p>Every rope traced in this tutorial ends at a fitting on deck, in the shrouds or in a top. What those fittings were on a ship of this date is not what later ships had, and not what most models show.</p>
+      </header>
+
+      <div class="pair">
+        <figure class="fig">
+          <svg viewBox="0 0 420 210" role="img" aria-label="A rope belayed with cross turns round a cleat">
+            <rect x="0" y="150" width="420" height="60" fill="#dfd6bd"/>
+            <line x1="0" y1="150" x2="420" y2="150" class="fd-deck"/>
+            <path d="M110,150 L110,120 Q110,108 90,104 L50,96 Q36,104 52,116 L128,128 L128,150 Z M292,150 L292,128 L368,116 Q384,104 370,96 L330,104 Q310,108 310,120 L310,150 Z M128,128 L292,128 L292,150 L128,150 Z" class="fd-timber" transform="translate(0,-18)"/>
+            <path d="M0,60 L120,96" class="fd-rope thick"/>
+            <path d="M120,96 Q150,104 180,102 L340,84 Q380,82 372,100 Q366,114 340,112 L80,86 Q46,84 50,100 Q56,114 82,110 L330,90 Q372,86 368,100 Q364,110 344,110 L200,104" class="fd-rope thick" style="stroke-width:3.4px"/>
+            <path d="M200,104 q-20,30 -4,50 q20,20 40,-2" class="fd-rope" style="stroke-width:3.4px"/>
+            <text x="6" y="44" class="fd-lbl strong">from aloft</text>
+            <text x="120" y="52" class="fd-lbl">cross turns, alternately round each end</text>
+            <text x="150" y="198" class="fd-lbl">the rest coiled and hung on the cleat</text>
+          </svg>
+          <figcaption><b>Belaying to a cleat</b>, as Steel defines it. A pin or the cross-piece of a pair of bitts is used the same way.</figcaption>
+        </figure>
+        <div class="text">
+          <h3>Small ropes are belayed; great ropes are stoppered, bitted or made fast</h3>
+          <blockquote>
+            <p>“Belaying. Fastening a rope, by giving it several cross turns alternately round each end, of a cleat, pin, &amp;c.”</p>
+            <footer>Steel, 1794, p.162</footer>
+          </blockquote>
+          <blockquote>
+            <p>“To belay: to fasten a rope, by winding it several times round a cleat, belaying-pin, or kevel: this term is peculiar to small ropes, and chiefly the running-rigging, there being several other expressions used for large ropes, as bitting, bending, making fast, stoppering, &amp;c.”</p>
+            <footer>Falconer, <i>Universal Dictionary of the Marine</i>, 1769, under BELAY</footer>
+          </blockquote>
+          <p>Falconer’s second half matters. The word belongs to the lighter running rigging. A cable is bitted, a tack or sheet is stoppered first, and a rope’s standing end is made fast or clinched.</p>
+          <p class="refs"><b>Sources.</b> Steel p.162; Falconer, BELAY.</p>
+        </div>
+      </div>
+
+      <div class="wide">
+        <div class="text">
+          <h3>What a 74 of this date had to belay to</h3>
+          <p>These are the fittings that Steel’s leads name, drawn simply. They are not to scale and their details are schematic; the Admiralty deck plans show the bitts and the rails but not the cleats, kevels or timberheads, so their exact places on a 74 are not established. Where each line of the ship lands is on <a href="belaying.html">the belaying plan</a>.</p>
+        </div>
+        <div class="fittings">
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="Bitts with sheaves and a cross-piece">
+              <line x1="6" y1="130" x2="214" y2="130" class="fd-deck"/>
+              <rect x="60" y="34" width="20" height="96" class="fd-timber"/>
+              <rect x="140" y="34" width="20" height="96" class="fd-timber"/>
+              <rect x="42" y="58" width="136" height="15" class="fd-timber"/>
+              <rect x="65" y="104" width="10" height="17" rx="4" class="fd-sheave"/>
+              <rect x="145" y="104" width="10" height="17" rx="4" class="fd-sheave"/>
+              <path d="M150,2 L150,106 Q150,118 162,120 L214,126" class="fd-rope thick"/>
+              <path d="M52,2 L52,56 M46,60 L58,72 M58,60 L46,72 M50,58 L50,74" class="fd-rope"/>
+              <text x="84" y="24" class="fd-lbl">cross-piece</text><path d="M110,28 V56" class="fd-lead"/>
+              <text x="86" y="118" class="fd-lbl">sheave</text>
+            </svg>
+            <figcaption><b>Bitts</b> Two posts with a cross-piece, at the foot of each mast. The posts have sheave-holes near the deck: a heavy fall comes down the mast, turns through the sheave and is led along the deck for a line of men. Lighter ropes belay round the cross-piece. This is the heavy-load fitting. <span class="refs">Steel p.162, Steel p.206, Steel p.210, Steel p.212</span></figcaption>
+          </figure>
+
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="A range cleat bolted to the ship’s side">
+              <rect x="0" y="0" width="220" height="150" fill="#dfd6bd"/>
+              <path d="M0,38 H220 M0,76 H220 M0,114 H220" class="fd-lead"/>
+              <path d="M24,62 Q24,50 40,50 L180,50 Q196,50 196,62 L196,70 L176,70 Q174,64 166,64 L130,64 L130,96 L90,96 L90,64 L54,64 Q46,64 44,70 L24,70 Z" class="fd-timber"/>
+              <circle cx="100" cy="82" r="2.4" class="fd-iron"/><circle cx="120" cy="82" r="2.4" class="fd-iron"/>
+              <path d="M0,112 L60,78 M60,78 L170,60 Q200,56 200,68 Q200,78 176,76 L44,60 Q20,58 20,68 Q20,78 44,76 L150,62" class="fd-rope thick"/>
+              <text x="8" y="140" class="fd-lbl">ship’s side, upper deck, in the waist</text>
+            </svg>
+            <figcaption><b>Range cleats</b> “Large cleats, with two arms, bolted in the waist of ships, to belay the tacks and sheets to.” They are on the upper deck, a level below the forecastle and quarterdeck. <span class="refs">Steel, glossary of rigging terms; Steel p.210–211</span></figcaption>
+          </figure>
+
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="A kevel against the bulwark">
+              <rect x="0" y="0" width="220" height="150" fill="#dfd6bd"/>
+              <path d="M0,40 H220 M0,84 H220" class="fd-lead"/>
+              <rect x="70" y="122" width="80" height="12" class="fd-timber"/>
+              <path d="M92,122 L88,70 Q84,44 56,28 L46,40 Q66,52 70,74 L76,122 Z" class="fd-timber"/>
+              <path d="M128,122 L132,70 Q136,44 164,28 L174,40 Q154,52 150,74 L144,122 Z" class="fd-timber"/>
+              <path d="M0,20 L58,46 M58,46 Q110,70 162,46 M162,46 Q176,36 166,32 Q110,60 56,34 Q44,38 58,46" class="fd-rope thick"/>
+              <text x="74" y="146" class="fd-lbl">step, nailed to the side</text>
+            </svg>
+            <figcaption><b>Kevels</b> “Two crooked pieces of timber, whose lower ends rest in a step or foot nailed to the ship’s sides; the heads branch out like horns.” Falconer says they belay “the great ropes by which the bottoms of the main-sail and fore-sail are extended”. Modern writers use kevel, cavel and staghorn for different shapes and do not agree; “staghorn” is not in Steel, Lever or Falconer. <span class="refs">Steel, glossary of rigging terms; Falconer, KEVELS</span></figcaption>
+          </figure>
+
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="A timberhead standing above the rail">
+              <rect x="0" y="92" width="220" height="58" fill="#dfd6bd"/>
+              <rect x="0" y="84" width="220" height="10" class="fd-timber"/>
+              <path d="M92,84 L92,54 Q84,50 84,40 L84,22 Q84,14 96,14 L124,14 Q136,14 136,22 L136,40 Q136,50 128,54 L128,84 Z" class="fd-timber"/>
+              <path d="M0,10 L88,60 M88,60 Q110,70 132,60 M88,66 Q110,78 132,66 M132,60 Q140,56 132,52" class="fd-rope thick"/>
+              <text x="8" y="124" class="fd-lbl">side of the forecastle</text>
+            </svg>
+            <figcaption><b>Timberheads</b> The heads of frame timbers standing above the deck, on the forecastle and at “each side the fore part of the quarter-deck”. Jib sheets and staysail sheets belay to them. As the bulwarks were built up solid around 1800 and after, the open rails and timberheads probably went with them. <span class="refs">Steel p.209, Steel p.214, Steel p.216, Steel p.218</span></figcaption>
+          </figure>
+
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="A cleat seized to a shroud">
+              <line x1="96" y1="0" x2="110" y2="150" class="fd-tar" style="stroke-width:7px"/>
+              <path d="M112,34 Q124,30 128,40 L124,50 Q120,46 116,52 L120,92 Q124,98 130,96 L132,106 Q124,114 114,108 Z" class="fd-timber"/>
+              <path d="M96,58 L122,56 M98,74 L123,72 M99,88 L124,86" class="fd-rope thin" style="stroke:var(--ink)"/>
+              <path d="M170,0 L128,44 M128,44 Q110,60 126,100 M126,100 Q138,108 132,96 Q118,64 126,40" class="fd-rope"/>
+              <text x="8" y="140" class="fd-lbl">a lower shroud, near the deck</text>
+            </svg>
+            <figcaption><b>Shroud cleats</b> A two-armed cleat with a hollowed back, seized to a lower shroud. The main topmast staysail tacks “belay round a cleat lashed to the shrouds near the deck”. <span class="refs"><a href="https://maritime.org/doc/steel/part5.htm">Steel, block-making, p.160</a>; Steel p.215</span></figcaption>
+          </figure>
+
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="A rack of belaying pins seized across the shrouds">
+              <path d="M40,0 L28,150 M84,0 L78,150 M128,0 L128,150 M172,0 L178,150" class="fd-tar" style="stroke-width:6px"/>
+              <rect x="14" y="74" width="192" height="13" class="fd-timber"/>
+              <path d="M56,60 V104 M106,60 V104 M150,60 V104" class="fd-woodline" style="stroke-width:5px"/>
+              <path d="M56,60 V70 M106,60 V70 M150,60 V70" class="fd-woodline" style="stroke-width:8px"/>
+              <path d="M66,0 L60,74 M52,90 L60,76 M60,90 L52,76" class="fd-rope"/>
+              <path d="M56,98 q-12,24 0,40 q12,-16 0,-40" class="fd-rope thin"/>
+              <text x="92" y="132" class="fd-lbl">seized to the shrouds</text>
+            </svg>
+            <figcaption><b>Racks of pins in the shrouds</b> Steel: “A short thin plank, with holes made through it, containing a number of belaying-pins, used instead of cleats: it is seized to the shrouds.” One with three holes was found in the wreck of the 74 <i>Invincible</i>, lost in 1758. Steel names “a pin in the shroud-rack” only in the mizen shrouds. Pins were turned ash, 16 inches long, or iron. <span class="refs">Steel p.171, Steel p.216; <a href="https://eprints.bournemouth.ac.uk/37484/1/COUSINS,%20Thomas_M.Res_2022.pdf">Cousins 2022</a>, p.68</span></figcaption>
+          </figure>
+
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="Pins in the open rail along the quarterdeck side">
+              <line x1="0" y1="132" x2="220" y2="132" class="fd-deck"/>
+              <rect x="0" y="100" width="220" height="32" fill="#dfd6bd"/>
+              <path d="M30,100 V52 M100,100 V52 M170,100 V52" class="fd-woodline" style="stroke-width:9px"/>
+              <rect x="0" y="42" width="220" height="11" class="fd-timber"/>
+              <path d="M62,30 V70 M132,30 V70" class="fd-woodline" style="stroke-width:5px"/>
+              <path d="M62,30 V40 M132,30 V40" class="fd-woodline" style="stroke-width:8px"/>
+              <path d="M150,0 L136,42 M128,58 L136,44 M136,58 L128,44" class="fd-rope"/>
+              <text x="6" y="24" class="fd-lbl strong">fife-rail</text>
+              <text x="6" y="120" class="fd-lbl">quarterdeck side, seen from inboard</text>
+            </svg>
+            <figcaption><b>Pins in the side rails</b> The open rail along the top of the quarterdeck and poop sides, which Steel calls the fife-rail, hand-rail or rough-tree rail, carries pins and cleats. Crossjack braces come to “a pin in the fife-rail”. <span class="refs">Steel p.171, Steel p.207, Steel p.213</span></figcaption>
+          </figure>
+
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="An iron pin in a boat skid across the waist">
+              <rect x="0" y="0" width="34" height="150" fill="#dfd6bd"/><rect x="186" y="0" width="34" height="150" fill="#dfd6bd"/>
+              <rect x="20" y="62" width="180" height="18" class="fd-timber"/>
+              <rect x="20" y="104" width="180" height="18" class="fd-timber" opacity="0.5"/>
+              <path d="M70,48 V96" stroke="var(--ink)" stroke-width="4" stroke-linecap="round"/>
+              <path d="M110,0 L74,62 M64,84 L76,66 M76,84 L64,66" class="fd-rope"/>
+              <text x="88" y="54" class="fd-lbl">iron pin</text>
+              <text x="40" y="140" class="fd-lbl">waist, gangway to gangway</text>
+            </svg>
+            <figcaption><b>The boat skids</b> Beams across the waist that carry the boats and spare spars. The fore topsail brace belays “round an iron pin in the boat-skid”, and staysail sheets “round a boatskid”. <span class="refs">Steel p.204, Steel p.215</span></figcaption>
+          </figure>
+
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="The breast-rail with a sheave-hole">
+              <line x1="0" y1="132" x2="220" y2="132" class="fd-deck"/>
+              <path d="M36,132 V50 M110,132 V50 M184,132 V50" class="fd-woodline" style="stroke-width:10px"/>
+              <rect x="10" y="40" width="200" height="12" class="fd-timber"/>
+              <rect x="10" y="84" width="200" height="12" class="fd-timber"/>
+              <rect x="64" y="86" width="14" height="8" rx="3" class="fd-sheave"/>
+              <path d="M150,0 L146,40" class="fd-rope"/><rect x="142" y="38" width="8" height="8" class="fd-fast"/>
+              <path d="M96,0 L72,86 Q70,100 78,104 L84,60 M78,54 Q84,36 90,54 M76,40 L92,52 M92,40 L76,52" class="fd-rope"/>
+              <text x="118" y="76" class="fd-lbl">sheave-hole</text>
+              <text x="214" y="26" class="fd-lbl" text-anchor="end">standing part</text>
+            </svg>
+            <figcaption><b>The breast-rails</b> The rail on stanchions across the fore end of the quarterdeck and the after end of the forecastle. Buntline and leech-line falls from the tops are made fast and belayed round it, some through sheave-holes in the breast-work. Lever defines breast-work as “Railing on the fore part of the quarter deck, where ropes are belayed”. <span class="refs">Steel p.163, Steel p.210–211</span></figcaption>
+          </figure>
+
+          <figure class="fitting">
+            <svg viewBox="0 0 220 150" role="img" aria-label="A rope hitched above the dead-eye of a lower shroud">
+              <rect x="0" y="120" width="220" height="12" class="fd-timber"/>
+              <line x1="110" y1="0" x2="110" y2="52" class="fd-tar" style="stroke-width:7px"/>
+              <circle cx="110" cy="64" r="14" class="fd-timber"/><circle cx="110" cy="106" r="14" class="fd-timber"/>
+              <path d="M104,62 V108 M110,58 V112 M116,62 V108" class="fd-rope thin" style="stroke:var(--ink)"/>
+              <path d="M190,0 L118,40 Q104,46 104,40 Q104,32 118,34 L126,46" class="fd-rope"/>
+              <text x="128" y="68" class="fd-lbl">dead-eye</text>
+              <text x="128" y="94" class="fd-lbl">laniard</text>
+              <text x="8" y="146" class="fd-lbl">channel</text>
+            </svg>
+            <figcaption><b>The shrouds themselves</b> Some lighter ropes are simply hitched to the lower shrouds. Topsail lifts belay “to the dead-eyes in the lower shrouds”; Lever has them “hitched round one of the lower Shrouds, above the Dead Eye”. Wooden shroud-trucks seized to the shrouds lead ropes down “that they may be more readily found”. <span class="refs">Steel p.204, Steel p.179; Lever p.38</span></figcaption>
+          </figure>
+        </div>
+        <div class="text" style="margin-top:22px">
+          <p>Steel’s leads also use cleats on the belfry and the catheads, a rack over the bowsprit, and the tops themselves: a good deal of topgallant gear belays in the top and never reaches the deck.</p>
+        </div>
+      </div>
+
+      <div class="pair">
+        <figure class="fig">
+          <svg viewBox="0 0 420 250" role="img" aria-label="Plan of a quarterdeck showing the fife-rail along the side and the bitts at the mast">
+            <path d="M0,36 Q210,8 420,24 L420,226 Q210,242 0,214 Z" class="fd-hull"/>
+            <path d="M0,36 Q210,8 420,24" class="fd-woodline" style="stroke:var(--green);stroke-width:5px"/>
+            <path d="M0,214 Q210,242 420,226" class="fd-woodline" style="stroke:var(--green);stroke-width:5px"/>
+            <path d="M360,26 Q352,125 360,224" class="fd-woodline" style="stroke-width:3px"/>
+            <circle cx="322" cy="125" r="13" class="fd-wood"/>
+            <path d="M286,113 V137" class="bitts"/>
+            <circle cx="96" cy="125" r="9" class="fd-wood"/>
+            <path d="M70,117 V133" class="bitts"/>
+            <text x="150" y="52" class="fd-lbl green">fife-rail: the rail along the side</text>
+            <text x="150" y="208" class="fd-lbl green">fife-rail</text>
+            <text x="368" y="60" class="fd-lbl">breast-</text><text x="368" y="74" class="fd-lbl">rail</text>
+            <text x="300" y="160" class="fd-lbl" text-anchor="end">bitts abaft the mainmast</text>
+            <text x="322" y="100" class="fd-lbl" text-anchor="middle">mainmast</text>
+            <text x="96" y="104" class="fd-lbl" text-anchor="middle">mizen mast</text>
+            <text x="84" y="154" class="fd-lbl" text-anchor="middle">bitts</text>
+            <text x="412" y="244" class="fd-lbl" text-anchor="end">bow to the right</text>
+          </svg>
+          <figcaption><b>Quarterdeck and poop in plan</b>, much simplified. In green, what Steel means by the fife-rail. At the foot of each mast are bitts, not a rail of pins.</figcaption>
+        </figure>
+        <div class="text">
+          <h3>The fife-rail was the rail along the side</h3>
+          <p>In Steel and Lever the fife-rail is not a rail round the foot of a mast. Steel speaks of “a cleat nailed on the taffarel fife-rail”, of the peak brails of the mizen leading “to the fife-rail on each quarter”, and of crossjack braces coming down the main shrouds to “a pin in the fife-rail”. Lever lays a spar “athwart, over the fife-rails”. In each case it is the open rail along the top of the quarterdeck and poop sides, the same thing as Steel’s “rough-tree-rail. A rail, breast high, along the sides of the poop and quarter-deck”. Falconer in 1769 has no entry for it.</p>
+          <p>The free-standing rail of pins round a mast is the later sense of the word. In this period the fitting at the foot of a mast was a set of bitts. The restored <i>Victory</i> has a circular rail at her mizen; whether that is original or a product of the 1920s restoration could not be established, so a mast-foot pin rail on a 74 of the 1790s is unproven and is not drawn anywhere in this tutorial.</p>
+
+          <h3 style="margin-top:2rem">Pins, yes; long pin rails, no</h3>
+          <p>Belaying pins themselves are well attested: in the <i>Invincible</i> wreck of 1758, in Falconer (“belaying-pins, fixed in the rails fore and aft”) and in Steel. What the period sources do not show is the long pinned rail bolted inside the bulwark that every clipper has. Pins sat in short racks seized to the lower shrouds, in the open side rails of the quarterdeck and poop, in the boat skids and in a rack over the bowsprit.</p>
+          <p>Short pin racks inside the bulwark took over as the quarterdeck and forecastle sides were built up solid. James Lees’s plans are reported to show them first on a frigate of about 1810; the book could not be consulted directly, and no dated source was found for when a 74 got them. Anything between about 1795 and 1810 is a guess.</p>
+          <p class="refs"><b>Sources.</b> Steel p.207–208 and Steel p.217 (fife-rail), Steel’s glossary (rough-tree-rail), Steel p.171 (pins and racks); Falconer, BELAY and the French–English part under CHEVILLOTS; <a href="https://eprints.bournemouth.ac.uk/37484/1/COUSINS,%20Thomas_M.Res_2022.pdf">T. Cousins, “The Rigging of HMS Invincible” (2022)</a>. Lees, <i>Masting and Rigging of English Ships of War</i>, is cited at second hand from modellers’ forums.</p>
+        </div>
+      </div>
+
+      <div class="pair" id="stoppers">
+        <figure class="fig">
+          <svg viewBox="0 0 420 220" role="img" aria-label="A stopper clapped on a fore tack at the bitts">
+            <line x1="0" y1="190" x2="420" y2="190" class="fd-deck"/>
+            <rect x="54" y="70" width="24" height="120" class="fd-timber"/>
+            <rect x="30" y="96" width="72" height="16" class="fd-timber"/>
+            <path d="M420,60 L0,150" class="fd-rope" style="stroke-width:12px;stroke-linecap:butt"/>
+            <path d="M70,130 Q60,146 82,150 L120,132" class="fd-rope count" style="stroke-width:4px"/>
+            <path d="M120,132 q6,-14 14,-6 q6,8 -6,12 M150,122 l14,-12 M168,118 l14,-12 M186,114 l14,-12 M204,110 l14,-12 M222,106 l14,-12" class="fd-rope count" style="stroke-width:4px"/>
+            <path d="M236,94 L286,52" class="fd-rope count" style="stroke-width:4px"/>
+            <text x="290" y="48" class="fd-lbl red">end held on</text>
+            <text x="150" y="150" class="fd-lbl red">stopper: turns laid in the lay of the tack</text>
+            <text x="110" y="84" class="fd-lbl">eye round the bitts</text>
+            <text x="330" y="100" class="fd-lbl strong">the tack</text>
+            <text x="6" y="176" class="fd-lbl">to its cleat</text>
+          </svg>
+          <figcaption><b>A stopper on a fore tack</b>, after Steel’s description; schematic. One man holds the end while the slack part of the tack is belayed.</figcaption>
+        </figure>
+        <div class="text">
+          <h3>A tack or sheet is held on a stopper first</h3>
+          <p>A rope under a very heavy strain cannot simply be turned up on a cleat by the men who are hauling it: the moment they eased their pull to pass a turn, it would run. So the heavy ropes have stoppers. “Fore-tack, and sheet, stoppers, are for securing the tacks and sheets, till belayed.”</p>
+          <p>A stopper is “of hawser-laid rope, about ten feet long”, with “an eye spliced in one end, the other end opened out, and made selvagee fashion”. Steel describes how the fore tack’s is put on:</p>
+          <blockquote>
+            <p>“In large ships the fore-tacks lead in under the forecastle, and the stopper reeves through the eye round the topsail-sheet-bitts, and clap on the tack, with a round turn under the standing-part, and lead up with several turns in the cuntline, and the end held on.”</p>
+            <footer>Steel, 1794, p.235. The cuntline is the groove between the strands of a rope (my gloss).</footer>
+          </blockquote>
+          <p>The turns jam in the groove of the thick rope and one man holding the end can hold the tack. The men who hauled it can then take the slack to its cleat or bitt. Main-tack stoppers hook “to a ring-bolt in the side”. Steel’s table for a 74 lists stoppers for the jeers, the course sheets, the tacks and the topsail sheets. For those ropes, this is what “belay” means in practice.</p>
+          <p class="refs"><b>Sources.</b> Steel p.176 and Steel p.235; Steel’s table for a 74, table pages 34–36.</p>
+        </div>
+      </div>
+
+      <div class="pair">
+        <figure class="fig">
+          <svg viewBox="0 0 420 260" role="img" aria-label="Overhauling: men in the top pull slack through so that a clew-line does not hold the sail back">
+            <path d="M210,0 V260" class="fd-woodline" style="stroke-width:14px"/>
+            <path d="M120,150 H300" class="fd-woodline" style="stroke-width:7px"/>
+            <path d="M40,60 H380" class="fd-woodline" style="stroke-width:8px"/>
+            <path d="M52,64 L60,140 Q210,160 360,140 L368,64 Z" class="fd-sail" opacity="0.6"/>
+            <path d="M360,140 L236,66 L226,148 L226,260" class="fd-rope"/>
+            <path d="M60,140 L184,66 L194,148 L194,260" class="fd-rope guess"/>
+            <circle cx="236" cy="66" r="4" class="fd-sheave"/><circle cx="184" cy="66" r="4" class="fd-sheave"/>
+            <path d="M240,136 V100 M235,107 L240,99 L245,107" class="fd-arrow"/>
+            <text x="244" y="182" class="fd-lbl strong">overhauled:</text>
+            <text x="244" y="197" class="fd-lbl">slack pulled up through</text>
+            <text x="244" y="212" class="fd-lbl">the block by hand</text>
+            <text x="126" y="168" class="fd-lbl">top</text>
+            <text x="44" y="50" class="fd-lbl">topsail yard, being hoisted</text>
+            <text x="234" y="250" class="fd-lbl">clew-line, to the deck</text>
+          </svg>
+          <figcaption><b>Overhauling a clew-line</b> while the topsail is hoisted. Schematic: the lead is simplified.</figcaption>
+        </figure>
+        <div class="text">
+          <h3>Coiling down and overhauling</h3>
+          <p>Once a rope is belayed its loose end is coiled so it will run clear the next time. “Coil. Rope laid in regular folds for the convenience of stowage, and hanging upon cleats, to prevent its being entangled.” Falconer: “The smaller ropes employed about the sails are coiled upon cleats at sea.” Lever ends almost every evolution with the same words: “the Geer coiled up”.</p>
+          <p>Overhauling is the opposite of hauling. “Overhauling. Extending the several parts of a tackle, or ropes, connected to blocks or dead-eyes, to any distance required.” When a topsail is hoisted after reefing, its clew-lines, buntlines and reef tackles all have to lengthen as the yard goes up. They will not pull themselves through their blocks, so Lever has “the Men in the Tops overhauling the Clew-lines, Buntlines, and Reef Tackles”: pulling slack up through the blocks by hand so that the lines do not bind the sail. That last clause is the notes’ reading of what the men are doing; Lever gives only the words quoted.</p>
+
+          <h4>The other words for handling a rope</h4>
+          <dl class="verbs">
+            <dt>Ease off, or veer away</dt><dd>“To slacken a rope gradually.”</dd>
+            <dt>Bowse (bouse)</dt><dd>“Hauling or pulling upon a rope or fall of a tackle.”</dd>
+            <dt>Sway</dt><dd>“To haul down upon a rope.” A yard is swayed up by its jeers.</dd>
+            <dt>Hand-tight</dt><dd>Steel lists the term; the notes this page is built from do not give his definition. The plain sense is as tight as hands alone can pull it.</dd>
+            <dt>Rack a tackle</dt><dd>To seize the parts of a fall together, so as to hold what has been gained while the fall is let go.</dd>
+            <dt>Fleet</dt><dd>To shift a tackle that has come “block-and-block”, its two blocks drawn together, so that it can be hauled on again.</dd>
+            <dt>Swig off</dt><dd>“Pulling upon the middle of a tight rope that is made fast at both ends.”</dd>
+          </dl>
+
+          <h4>How fast could a rope be let go?</h4>
+          <p>No source that was read gives a figure. The period manuals do not time anything. What they give is a verb. When topsails are to be reefed, Lever writes that “the Halliards are let fly”: the turns are thrown off and the rope left to run. Neither he nor Steel describes laying a halliard down in long flakes to run clear, though the constant “Geer coiled up” shows that a clear coil at every belaying point was the rule.</p>
+          <p class="refs"><b>Sources.</b> Steel p.164 (coil), Steel p.170 (overhauling), Steel p.162–176 (ease off, bowsing, sway, hand-tight, racking, fleeting, swigging off); Falconer, COIL; Lever p.83–87.</p>
+        </div>
+      </div>
+
+      <div class="wide">
+        <div class="text">
+          <h3>Each rope always came to the same place</h3>
+          <p>It is usually said that belaying points were fixed so that men could find a rope in the dark, in a gale or under fire. The period evidence for that is thinner than might be expected.</p>
+          <ul>
+            <li>No source read cites an Admiralty order fixing belaying points. Steel describes usual practice and gives alternatives: “a cleat… or to the topsail-sheet-bitts”, and of one line that it “belays where most convenient”. Consistency was custom within the service and strict habit within a ship.</li>
+            <li>It was learned by doing. Falconer declined to describe leads at all: “To explain the track of every particular rope, through its different channels, would be equally useless and unintelligible to a land reader: to mariners it was superfluous: and even the youths who are trained to the sea, would reap little advantage from it; because their situation affords them much better opportunities of making these minute discoveries.”</li>
+            <li>Lever wrote the <i>Sheet Anchor</i> to fill that gap, “as a Key to the leading of Rigging and to Practical Seamanship” for young officers who “sometimes feel a diffidence in soliciting information, either from a fear of exposing their ignorance, or from an idea that such a request may be treated with ridicule”.</li>
+            <li>Some fittings sort the ropes by themselves. Falconer describes the rack at the bowsprit as a frame of sheaves “to direct the sailors to the respective ropes passing through it”. Shroud-trucks, sheaves in the bitts and sheave-holes in the breast-work do the same: each rope always arrives at the same hole.</li>
+            <li><span class="mark later">later, USN</span> The argument from darkness is stated outright only in an American textbook of 1891: “Care should be taken not to alter leads about the deck except for good cause. So much of the handling of gear is done in the dark that the men may be confused, perhaps at a critical moment, if the position of any running rigging is frequently varied from that sanctioned by well-established custom.” It is a clear statement of the principle, not Royal Navy evidence.</li>
+          </ul>
+          <p class="refs"><b>Sources.</b> Steel p.210, Steel p.225; Falconer, preface (quoted in Cousins 2022, p.79) and RACK; Lever, preface; S. B. Luce, <i>Text-Book of Seamanship</i>, 1891 revision, p.155 (<a href="https://maritime.org/doc/luce/part3.htm">maritime.org</a>). Captains’ order books and Harland’s <i>Seamanship in the Age of Sail</i>, the likely places for period Royal Navy wording, could not be reached.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 5 ------------------------------------------------------------------>
+    <section class="topic" id="men">
+      <header>
+        <p class="topic-no">Five</p>
+        <h2>How many men hauled on what</h2>
+        <p>The rigging manuals do not say. Steel and Lever describe what is done to each rope and almost never who does it, and neither gives a number of men for any rope or a station bill. No source that could be read gives numbers per rope for a 74 of 1790 to 1815. What can be given is the size of the ship’s company and how it was divided, with each statement marked for where it comes from.</p>
+        <p class="marks-key"><span class="mark">period</span> read in a source of the time &nbsp; <span class="mark later">later</span> read in a later or secondary source &nbsp; <span class="mark infer">inference</span> reasoned from those &nbsp; <span class="mark unverified">unverified</span> general knowledge or a tertiary source, not checked</p>
+      </header>
+
+      <div class="pair">
+        <figure class="fig">
+          <svg viewBox="0 0 420 228" role="img" aria-label="Deck plan of a 74 showing where each part of the ship’s company worked">
+            <path d="M408,104 C392,62 352,50 304,50 L60,53 C40,55 26,70 24,84 L24,124 C26,138 40,153 60,155 L304,158 C352,158 392,146 408,104 Z" class="fd-hull"/>
+            <path d="M306,51 C350,52 384,64 398,92 L398,116 C384,144 350,156 306,157 Z" class="fd-zone"/>
+            <path d="M222,52 L302,51 L302,157 L222,157 Z" class="fd-zone" style="fill-opacity:0.06"/>
+            <path d="M139,53 L218,52 L218,157 L139,156 Z" class="fd-zone"/>
+            <path d="M60,54 L135,53 L135,156 L60,154 C42,152 30,138 28,124 L28,84 C30,70 42,56 60,54 Z" class="fd-zone"/>
+            <circle cx="369" cy="104" r="15" class="fd-zone aloft"/><circle cx="212" cy="104" r="17" class="fd-zone aloft"/><circle cx="109" cy="104" r="12" class="fd-zone aloft"/>
+            <circle cx="369" cy="104" r="4" class="fd-wood"/><circle cx="212" cy="104" r="4.5" class="fd-wood"/><circle cx="109" cy="104" r="3.4" class="fd-wood"/>
+            <circle cx="124" cy="104" r="3" class="fd-belay"/>
+            <text x="352" y="42" class="fd-lbl strong" text-anchor="middle">forecastle men</text>
+            <text x="262" y="42" class="fd-lbl strong" text-anchor="middle">waisters</text>
+            <text x="120" y="42" class="fd-lbl strong" text-anchor="middle">afterguard and marines</text>
+            <text x="369" y="138" class="fd-lbl red" text-anchor="middle">fore top</text>
+            <text x="212" y="140" class="fd-lbl red" text-anchor="middle">main top</text>
+            <text x="100" y="134" class="fd-lbl red" text-anchor="middle">mizen top</text>
+            <text x="352" y="74" class="fd-lbl" text-anchor="middle">forecastle</text>
+            <text x="262" y="74" class="fd-lbl" text-anchor="middle">waist</text>
+            <text x="178" y="74" class="fd-lbl" text-anchor="middle">quarterdeck</text>
+            <text x="84" y="74" class="fd-lbl" text-anchor="middle">poop</text>
+            <text x="136" y="118" class="fd-lbl green">wheel</text>
+            <text x="24" y="186" class="fd-lbl">A 74 of about 600, both watches</text>
+            <text x="24" y="202" class="fd-lbl">forecastle 40–50 · each of fore and main tops 40–50 · mizen top 20–25</text>
+            <text x="24" y="218" class="fd-lbl">afterguard 60–70 · waisters over 100 · marines somewhat over 100</text>
+          </svg>
+          <figcaption><b>The parts of ship</b> and where each worked, bow to the right. The numbers are arithmetic, not evidence: a 1905 account’s figures for a first rate scaled down to a 74. The figure for marines is unverified general knowledge.</figcaption>
+        </figure>
+        <div class="text">
+          <h3>About six hundred men, on paper</h3>
+          <ul>
+            <li><span class="mark">period</span> “The complement in a 74 is 650, and in a 64, 500 men.” Falconer, 1769, under RATES.</li>
+            <li><span class="mark">period</span> The same entry gives a third rate’s petty officers: 3 master’s mates, 16 midshipmen, 10 quartermasters and their mates, 6 boatswain’s mates and yeomen, 4 gunner’s mates and yeomen and 18 quarter-gunners, with 4 lieutenants in peace and 5 in war.</li>
+            <li><span class="mark unverified">unverified</span> <i>Bellona</i> (1760): 650. <i>Bellerophon</i> (1786): 590 established, 566 borne in October 1805. These are from Wikipedia’s summaries and were not checked against primary sources.</li>
+            <li><span class="mark unverified">unverified</span> Marines in a 74: somewhat over 100.</li>
+            <li><span class="mark infer">inference</span> A working figure is 590 to 650 on paper, and commonly fewer actually on board.</li>
+          </ul>
+
+          <h3 style="margin-top:2rem">The seamen were divided by part of ship</h3>
+          <p>The fullest description read is John Masefield’s <i>Sea Life in Nelson’s Time</i> (1905), a secondary account drawn from memoirs. His numbers are for a first rate.</p>
+          <ul>
+            <li><span class="mark later">later</span> <b>Forecastle men</b>, the “sheet-anchor men”: older prime seamen. Anchors, bowsprit, head sails and the fore yard.</li>
+            <li><span class="mark later">later</span> <b>Topmen</b>, in three bodies for the fore, main and mizen tops: young, active seamen who work aloft. “The forecastle, fore and main tops were manned by from 60 to 70 each. A mizzentop needed fewer men, from 25 to 30.”</li>
+            <li><span class="mark later">later</span> <b>Afterguard</b> (after-guard): “poor seamen and landsmen… They worked the after braces, the spanker, main-sail, and lower stay-sails.” About 90 in a first rate.</li>
+            <li><span class="mark later">later</span> <b>Waisters</b>: landsmen and the least skilled, who “hauled aft the fore and main sheets, and kept the decks white”. “Large ships generally carried about twice as many waisters as after-guard men.”</li>
+            <li><span class="mark later">later</span> <b>Idlers</b>: day-men who stand no watch (holders, poulterers, painters, tailors, mast men, butchers, barbers, cooks and so on) but turn out when all hands are called.</li>
+            <li><span class="mark later">later</span> <b>Marines</b>: “The after-guards, marines, and waisters invariably manned the capstans when anchor was weighed.”</li>
+            <li><span class="mark later">later</span> “The topmen, forecastle men, after-guards, and waisters were divided into two watches, larboard and starboard.”</li>
+            <li><span class="mark later">later</span> Admiral Smyth’s <i>Sailor’s Word-Book</i> (1867) agrees: the afterguard is “stationed on the quarter-deck and poop, to work the after-sails… constituting with waisters the largest part of the crew”; forecastle-men are “prime seamen”; waisters were “in former times stationed in the waist in working the ship, as they had little else of duty but hoisting and swabbing the decks”.</li>
+            <li><span class="mark">period</span> Steering in a ship of war is shared among the most expert sailors, “timoneers”, supervised by the quartermasters. Falconer, under STEERING.</li>
+            <li><span class="mark infer">inference</span> Scaling Masefield’s first-rate figures to a 74 of about 600 gives very roughly 40 to 50 forecastle men, 40 to 50 in each of the fore and main tops, 20 to 25 mizen topmen, 60 to 70 afterguard and over 100 waisters, across both watches. This is arithmetic, not a sourced figure.</li>
+          </ul>
+          <p>So the pattern is plain even without numbers. The skilled men go aloft or work the head of the ship. The heavy hauling on deck, at the braces, halliards, tacks and sheets, is done by the afterguard, the waisters and the marines, who are the largest bodies and the least skilled.</p>
+          <p class="refs"><b>Sources.</b> Falconer, RATES and STEERING; J. Masefield, <i>Sea Life in Nelson’s Time</i> (1905), pp.129–131 (<a href="https://www.gutenberg.org/ebooks/70699">Project Gutenberg</a>); W. H. Smyth, <i>The Sailor’s Word-Book</i> (1867), under AFTER-GUARD, FORECASTLE-MEN, WAISTERS.</p>
+        </div>
+      </div>
+
+      <div class="wide">
+        <div class="text">
+          <h3>Stations were built so that one watch could work the ship</h3>
+          <ul>
+            <li><span class="mark later">later</span> Later manuals describe the method in the same terms (Brady, US Navy, 1848; Boyd, Royal Navy, 1860; Luce, US Navy, 1866). The company is in two watches, each split into parts with a captain to each. Station bills for tacking and wearing, reefing and hoisting, making and shortening sail, and mooring are then built from the watch bill, “taking care to have at each station an equal number of each watch, so that with but one watch on deck, the vessel may be worked and all stations manned” (Luce).</li>
+            <li><span class="mark later">later</span> Captain Glascock (Royal Navy, 1836) complains of calling “After-guard and main-topmen, aft!” for trivial jobs, when “twenty or thirty men, perhaps more, ascend the ladders”. That gives a feel for one watch of those two bodies in a ship of the line.</li>
+            <li><span class="mark later">later</span> The same men do more than one haul. In the Royal Navy of the 1860s the order “Head braces” in tacking is “to caution the men to come from the main tack and sheets etc. to the weather head-braces” (Nares, 1862). That is one reason the after yards and the head yards are swung in two stages.</li>
+            <li><span class="mark">period</span> Lever notices numbers only by contrast. He rejects a second pair of topsail braces for merchant ships “where there are few Hands”, because “the overhauling two pair of Braces would impede the working of the Ship”. A man-of-war had the hands to spare.</li>
+            <li><span class="mark">period</span> Falconer gives numbers for action, not for working ship: 13 men to a 32-pounder and 9 to an 18-pounder “when the ship is well manned, so as to fight both sides at once”, and 80 small-arms men for a third rate of 70 guns. “The master superintends the movements of the ship, and whatever relates to the sails. The boatswain, and a sufficient number of men, are stationed to repair the damaged rigging.”</li>
+          </ul>
+
+          <h4>Who goes where for tacking or wearing</h4>
+          <p><span class="mark infer">inference</span> The table puts Masefield’s divisions against two later American lists of stations (Totten 1862, repeated by Luce; Brady 1848). It is a working picture, not a period station bill.</p>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Body</th><th>Station for tacking or wearing</th></tr></thead>
+            <tbody>
+              <tr><th>Forecastle men</th><td>Jib and fore topmast staysail sheets, fore tack, fore bowline, head bowlines, spritsail yard braces and jib guys; later the head braces</td></tr>
+              <tr><th>Fore topmen on deck</th><td>Fore sheet, head braces, fore clew-garnets; a few aloft at the breast backstays</td></tr>
+              <tr><th>Main topmen on deck</th><td>Main tack and bowline, main clew-garnets, main top bowline</td></tr>
+              <tr><th>Afterguard, mizen topmen, marines</th><td>Main braces, crossjack and mizen topsail braces, main sheet, mizen (driver) brails and sheet</td></tr>
+              <tr><th>Waisters</th><td>Tail on to the main braces, then run forward to the head braces; fore and main sheets</td></tr>
+              <tr><th>Quartermaster and helmsmen</th><td>Conn and wheel</td></tr>
+              <tr><th>Idlers</th><td>On deck when all hands are called, tailing on where told</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="text">
+          <p><span class="mark later">later, USN</span> Totten’s list, for comparison, in his own words: “a hand by the jib sheet and a few at the brails; hands by all the bowlines, lifts, trusses, tacks, and sheets; hands in the chains to overhaul the lee main sheet; the clewgarnets manned; topmen at the breast backstays, and a few aloft to overhaul the lifts and trusses, and to attend to the out-riggers; a good helmsman at the wheel; a quarter master at the conn; a few hands at the spanker sheet and lee topping-lift, and all the rest of the force at the weather main and lee cross-jack braces, lee main tack and weather main sheet.”</p>
+          <h4>What was not found</h4>
+          <p>A count of men on the main brace or the topsail halliards of a ship this size. The places to look are John Harland’s <i>Seamanship in the Age of Sail</i>, the captains’ order books printed in Brian Lavery’s <i>Shipboard Life and Organisation 1731–1815</i>, and the 1804 <i>Observations and Instructions for… Officers of the Royal Navy</i>. None could be reached. Until one of them is read, this tutorial prints no numbers per rope.</p>
+          <p class="refs"><b>Sources.</b> W. Brady, <i>The Kedge-Anchor</i> (1848), §§237, 241; J. M. Boyd, <i>A Manual for Naval Cadets</i> (1860), pp.322–323; S. B. Luce, <i>Seamanship</i> (1866); W. N. Glascock, <i>The Naval Service</i> (1836); G. S. Nares, <i>Seamanship</i> (1862), p.156; B. J. Totten, <i>Naval Text-Book</i> (1862), §580; Lever p.49; Falconer, QUARTERS.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="topic fund-end">
+      <header>
+        <p class="topic-no">Sources</p>
+        <h2>What this page is built from</h2>
+      </header>
+      <div class="wide" style="margin-top:20px">
+        <div class="text">
+          <ul>
+            <li>David Steel, <i>The Elements and Practice of Rigging and Seamanship</i> (London, 1794). <a href="https://maritime.org/doc/steel/">Transcription at maritime.org</a>. Page numbers are Steel’s own.</li>
+            <li>Darcy Lever, <i>The Young Sea Officer’s Sheet Anchor</i> (2nd ed., 1819), read in the <a href="https://archive.org/details/youngseaofficers00leve_0">1827 reprint at archive.org</a>. The 1843 American edition was rewritten to later practice and is not used.</li>
+            <li>William Falconer, <i>An Universal Dictionary of the Marine</i> (1769). <a href="https://www.gutenberg.org/files/57705/57705-h/57705-h.htm">Project Gutenberg</a>.</li>
+            <li>Later and secondary works are named where they are used, and marked as later.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav id="pager"></nav>
+
+  <script src="js/site.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/fundamentals.js"></script>
+</body>
+</html>

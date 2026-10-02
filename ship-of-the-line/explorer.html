@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The main topsail: rigging a 74</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <nav id="site"></nav>
+  <header class="masthead">
+    <div>
+      <h1 id="title">The main topsail</h1>
+      <p class="series">The running rigging of a 74-gun ship, about 1805</p>
+      <p class="standfirst">The lookup page: choose a sail, then a line, to trace it through all three views. <a href="square-sails.html">The square sails explained in order</a> is the place to start.</p>
+    </div>
+    <nav id="sails" aria-label="Square sails, laid out as on the ship with the bow to the right"></nav>
+  </header>
+
+  <main>
+    <section class="explorer" aria-label="Rigging of the chosen sail">
+      <nav id="lines" aria-label="Lines of the chosen sail"></nav>
+
+      <div class="bench">
+        <div id="stage" class="stage">
+          <figure class="fig" id="view-aft">
+            <svg role="img" aria-label="The mast and its sails seen from astern"></svg>
+            <figcaption>
+              <span><b>From astern</b>, looking forward. Starboard is on the right. Lines that leave for another mast are cut short here; follow them in the profile.</span>
+              <button type="button">Enlarge</button>
+            </figcaption>
+          </figure>
+          <figure class="fig" id="view-side">
+            <svg role="img" aria-label="The ship in profile, bow to the right"></svg>
+            <figcaption>
+              <span><b>Profile</b>, bow to the right. The yards are square, so each is seen end-on and the sail edge-on.</span>
+              <button type="button">Enlarge</button>
+            </figcaption>
+          </figure>
+          <figure class="fig" id="view-plan">
+            <svg role="img" aria-label="Deck plan, bow to the right, showing where each line belays"></svg>
+            <figcaption>
+              <span><b>Deck plan</b>, drawn under the profile to the same scale.
+                <span class="key"><i class="k-dot"></i> belays on the forecastle, quarterdeck or poop, at the shrouds or in the top</span>
+                <span class="key"><i class="k-sq"></i> belays on the upper deck, a level below</span>
+                <span class="key"><i class="k-ring"></i> fitting not named in the period sources</span>
+              </span>
+              <button type="button">Enlarge</button>
+            </figcaption>
+          </figure>
+        </div>
+
+        <article id="detail" class="detail" aria-live="polite"></article>
+      </div>
+
+      <p class="legend">
+        <span class="key"><i class="k-line"></i> lead as Steel or Lever describe it</span>
+        <span class="key"><i class="k-dash"></i> position not given by either; my inference</span>
+        <span class="key"><i class="k-fast"></i> made fast</span>
+        <span class="key"><i class="k-block"></i> block</span>
+        <span class="key"><i class="k-dot"></i> belayed</span>
+        <span class="key">A dotted name in the list has no lead to draw.</span>
+      </p>
+    </section>
+
+    <section class="prose">
+      <div id="notice"></div>
+
+      <h2>Which sail has which line</h2>
+      <p>All the square sails at once. A dot means the line is fitted, a dash that the sources say it is not, a question mark that they disagree or are silent. The sail names open that sail above.</p>
+    </section>
+
+    <div class="matrix-wrap"><table id="matrix"></table></div>
+
+    <section class="prose">
+      <h2>How this is drawn</h2>
+      <p>The spars are those of the 74 in David Steel’s tables of 1794: a large-class ship of 1,799 tons with a lower deck of 176 feet, a main yard of 97 feet and a main topsail yard of 70. Mast positions follow his rule. The heights of the decks above the water, and so of everything aloft, are my estimates and are good to a few feet, not to inches. The deck layout is taken from Admiralty draughts of the <i>Bellona</i> and Arrogant classes and <i>Elephant</i> (1786), stretched to Steel’s length.</p>
+      <p>The sail is set, the yard hoisted and the yards square. Ropes that in life lie against the mast or along the yard are drawn a little apart so they can be told from one another. Rope sizes are circumferences, as the period measured them, and were read from a poor scan of Steel’s table.</p>
+      <p>The ship is rigged as of about 1805. Where Steel (1794) and Lever (1808) differ, both are given and the drawing says which it follows. Lever is quoted from the 1819 text; the 1843 American edition that is easiest to find online was rewritten to later practice. The mizen is drawn with a standing gaff and a driver boom.</p>
+
+      <h2>Sources</h2>
+      <ul class="sources">
+        <li>David Steel, <i>The Elements and Practice of Rigging and Seamanship</i> (London, 1794). <a href="https://maritime.org/doc/steel/">Transcription at maritime.org</a>, with the tables of rigging by rate as page images.</li>
+        <li>Darcy Lever, <i>The Young Sea Officer’s Sheet Anchor</i> (2nd ed., 1819), read in the <a href="https://archive.org/details/youngseaofficers00leve_0">1827 reprint at archive.org</a>.</li>
+        <li>William Falconer, <i>An Universal Dictionary of the Marine</i> (1769). <a href="https://www.gutenberg.org/files/57705/57705-h/57705-h.htm">Project Gutenberg</a>.</li>
+        <li>Admiralty draughts, Royal Museums Greenwich, J3093, J2935, J2936 and J3047, viewed on Wikimedia Commons.</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav id="pager"></nav>
+
+  <script src="js/site.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/sails-courses.js"></script>
+  <script src="js/sails-topsails.js"></script>
+  <script src="js/sails-upper.js"></script>
+  <script src="js/sails-foreaft.js"></script>
+  <script src="js/sails-studding.js"></script>
+  <script src="js/matrix.js"></script>
+  <script src="js/context.js"></script>
+  <script src="js/figure.js"></script>
+  <script src="js/describe.js"></script>
+  <script src="js/explorer.js"></script>
+</body>
+</html>

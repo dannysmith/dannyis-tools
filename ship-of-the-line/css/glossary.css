@@ -1,0 +1,72 @@
+/* The glossary. Tokens and type come from style.css. */
+
+.gloss { max-width: 1480px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 44px); }
+.gloss-intro { max-width: 68ch; margin-top: 28px; padding-top: 18px; border-top: 1px solid var(--ink); }
+.gloss-intro p { margin: 0 0 0.8rem; }
+
+/* The filter and the letters stay in reach while the list scrolls. */
+.gloss-tools {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  gap: 10px 24px;
+  margin-top: 28px;
+  padding: 12px 0;
+  background: var(--paper);
+  border-bottom: 1px solid var(--rule);
+  font: 500 0.8rem/1.4 var(--sans);
+}
+.find { display: block; font-weight: 600; font-size: 0.76rem; color: var(--soft); }
+.find input {
+  display: block;
+  width: min(22rem, 78vw);
+  margin-top: 4px;
+  padding: 8px 10px;
+  font: 400 1rem/1.2 var(--serif);
+  color: var(--ink);
+  background: var(--sheet);
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+}
+.check { display: inline-flex; align-items: center; gap: 6px; padding-bottom: 9px; color: var(--ink); }
+.check input { accent-color: var(--red); }
+.count { padding-bottom: 9px; color: var(--soft); }
+.letters { display: flex; flex-wrap: wrap; gap: 2px 3px; flex-basis: 100%; }
+.letters a { min-width: 1.7em; padding: 3px 0; text-align: center; text-decoration: none; color: var(--ink); border: 1px solid transparent; }
+.letters a:hover { border-color: var(--hemp); }
+
+.letter { display: grid; grid-template-columns: 5rem minmax(0, 1fr); margin-top: 36px; padding-top: 12px; border-top: 1px solid var(--ink); }
+.letter[hidden] { display: none; }
+.letter h2 { margin: 0; font-weight: 400; font-size: 2.9rem; line-height: 1; color: var(--soft); scroll-margin-top: 8.5rem; }
+.letter dl { margin: 0; columns: 2 26rem; column-gap: clamp(24px, 4vw, 64px); }
+
+.entry { break-inside: avoid; margin: 0 0 1.25rem; padding-left: 12px; border-left: 2px solid transparent; scroll-margin-top: 8.5rem; font-size: 0.95rem; line-height: 1.55; }
+.entry.target { border-left-color: var(--red); }
+.entry dt { font-weight: 700; font-size: 1.12rem; line-height: 1.3; }
+.entry dt a { text-decoration: none; }
+.entry dt a:hover { text-decoration: underline; text-decoration-color: var(--hemp); }
+.entry .variants { display: block; font-weight: 400; font-style: italic; font-size: 0.95rem; color: var(--soft); }
+.entry .when { margin-left: 0.5em; padding: 0 6px; border: 1px solid var(--hemp); font: 500 0.7rem/1.6 var(--sans); color: #6d5b2f; white-space: nowrap; vertical-align: 0.15em; }
+.entry dd { margin: 0.2rem 0 0; }
+.entry p { margin: 0 0 0.3rem; }
+.entry blockquote { margin: 0.35rem 0; padding-left: 12px; border-left: 2px solid var(--hemp); }
+.entry .spell { font-size: 0.88rem; color: var(--soft); }
+.entry .spell b { font-weight: 700; color: var(--ink); }
+.entry .refs { margin: 0; }
+.entry.later dt a { color: var(--soft); }
+
+.gloss-sources { max-width: 68ch; margin: 64px 0 72px; }
+.gloss-sources h2 { margin: 0 0 0.4rem; padding-top: 0.9rem; border-top: 1px solid var(--ink); font-weight: 400; font-size: 1.9rem; line-height: 1.15; }
+.gloss-sources ul { padding-left: 1.1rem; }
+.gloss-sources li { margin-bottom: 0.5rem; }
+
+@media (max-width: 640px) {
+  .gloss-tools { position: static; }
+  .letter { grid-template-columns: minmax(0, 1fr); }
+  .letter h2 { font-size: 2.2rem; margin-bottom: 0.4rem; scroll-margin-top: 1rem; }
+  .entry { scroll-margin-top: 1rem; }
+  .letters a { min-width: 1.5em; }
+}

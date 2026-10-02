@@ -1,0 +1,161 @@
+/* Steering and sailing theory. Uses the colour tokens of style.css: the tiller
+   (the thing a helm order names) is in the draughtsman's red, what the ship's
+   head does is in his green, the wind is ink. */
+
+.handling .legend { max-width: 1480px; margin: 0 auto; padding: 10px clamp(16px, 3vw, 44px) 0; border-top: 0; line-height: 2.2; }
+.handling main { padding-bottom: 8px; }
+.handling .legend .key { white-space: normal; }
+
+/* A section: its drawing on the left, pinned while the text beside it scrolls. */
+.h-sec {
+  display: grid;
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  grid-template-areas: 'fig head' 'fig body';
+  grid-template-rows: auto 1fr;
+  column-gap: clamp(24px, 4vw, 64px);
+  margin-top: 72px;
+  padding-top: 18px;
+  border-top: 1px solid var(--ink);
+  scroll-margin-top: 12px;
+}
+.h-head { grid-area: head; max-width: 60ch; }
+.h-body { grid-area: body; max-width: 60ch; }
+.h-fig { grid-area: fig; align-self: start; margin: 0; }
+
+.h-head .chapter-no { margin: 0; font-style: italic; color: var(--soft); }
+.h-head h2 { margin: 0.2rem 0 0.8rem; font-weight: 400; font-size: clamp(1.8rem, 3vw, 2.6rem); line-height: 1.1; letter-spacing: -0.015em; }
+.h-head p, .h-body p { margin: 0 0 0.85rem; }
+.h-body h3 { margin: 2rem 0 0.4rem; font-weight: 400; font-size: 1.45rem; line-height: 1.2; letter-spacing: -0.01em; }
+.h-body h4 { margin: 1.3rem 0 0.2rem; font-weight: 700; font-size: 1.06rem; line-height: 1.3; }
+.h-body blockquote { margin: 0 0 0.9rem; padding-left: 16px; border-left: 2px solid var(--hemp); font-style: italic; }
+.h-body ul { margin: 0 0 0.9rem; padding-left: 1.1rem; }
+.h-body li { margin-bottom: 0.45rem; }
+.h-body .lead { margin-bottom: 0.9rem; }
+.h-body .refs { margin-top: 1.4rem; padding-top: 0.6rem; border-top: 1px solid var(--rule); }
+
+/* The standing of a statement */
+.st { display: inline-block; padding: 0 5px; border: 1px solid var(--green); font: 500 0.7rem/1.55 var(--sans); font-style: normal; color: var(--green); white-space: nowrap; vertical-align: 0.08em; }
+.st.l { border-color: var(--hemp); color: #6f5d33; }
+.st.i { border: 1px dashed var(--red); color: var(--red); }
+
+/* Drawings */
+.h-fig svg { display: block; width: 100%; height: auto; background: var(--sheet); border: 1px solid var(--rule); }
+.h-duo { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; align-items: start; }
+.h-duo.wide { grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr); }
+.h-one { max-width: 520px; }
+.h-fig figcaption { padding-top: 6px; font: 400 0.78rem/1.45 var(--sans); color: var(--soft); }
+.h-fig figcaption b { color: var(--ink); font-weight: 600; }
+
+/* Controls and read-out under a drawing: side by side where there is room. */
+.h-panel { display: grid; grid-template-columns: minmax(0, 1fr); gap: 0 24px; align-items: start; }
+.h-ctl { margin-top: 12px; }
+.h-ctl .chip-row { margin-bottom: 7px; }
+.h-ctl .chip-row h3 { min-width: 5.2em; margin-right: 4px; font-size: 0.92rem; }
+.h-ctl .chip-row button { padding: 6px 9px; font-size: 0.78rem; }
+.h-ctl .plain { border-color: transparent; border-bottom-color: var(--hemp); border-radius: 0; padding-left: 0; padding-right: 0; }
+.h-slide { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 12px; margin-bottom: 8px; font: 500 0.82rem/1.4 var(--sans); }
+.h-slide input[type='range'] { flex: 1 1 220px; accent-color: var(--red); }
+.h-slide output { min-width: 9em; }
+.h-check { display: inline-flex; align-items: center; gap: 6px; font: 400 0.82rem/1.4 var(--sans); }
+.h-check input { accent-color: var(--red); }
+
+.h-read { margin: 10px 0 0; padding: 10px 0 0; border-top: 1px solid var(--rule); font: 400 0.84rem/1.5 var(--sans); }
+.h-read .said { margin: 0; font: 400 1.25rem/1.25 var(--serif); color: var(--red); }
+.h-read .means { margin: 0.15rem 0 0.5rem; }
+.h-read dl { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 2px 12px; margin: 0; }
+.h-read dt { color: var(--soft); }
+.h-read dd { margin: 0; }
+.h-read .note { margin: 0.5rem 0 0; color: var(--red); min-height: 1.3em; }
+.h-read p { margin: 0 0 0.4rem; }
+.h-read .big { font: 400 1.25rem/1.25 var(--serif); }
+
+/* A helm order in the text: its name gives the order to the drawing. */
+.h-order { margin: 0 0 1.1rem; }
+.h-order h4 { margin: 0 0 0.15rem; }
+.h-give { font: 700 1.06rem/1.3 var(--serif); color: var(--ink); background: none; border: 0; border-bottom: 1px solid var(--hemp); padding: 0; cursor: pointer; text-align: left; }
+.h-give:hover { border-bottom-color: var(--red); }
+.h-give[aria-pressed='true'] { color: var(--red); border-bottom-color: var(--red); }
+.h-order p { margin: 0 0 0.3rem; }
+.h-order .does { font: 400 0.86rem/1.5 var(--sans); }
+.h-order .does b { font-weight: 600; }
+
+.h-table { width: 100%; border-collapse: collapse; margin: 0 0 0.9rem; font: 400 0.84rem/1.4 var(--sans); }
+.h-table th, .h-table td { padding: 5px 10px 5px 0; text-align: left; vertical-align: top; border-top: 1px solid var(--rule); }
+.h-table thead th { border-top: 0; font-weight: 600; color: var(--soft); }
+.h-table .unsure { color: var(--red); }
+
+/* Inside the drawings */
+.h-arrow line, .h-arrow path { stroke-width: 2px; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+.h-arrow.wind line { stroke: var(--ink); stroke-width: 2.6px; }
+.h-arrow.wind polygon { fill: var(--ink); }
+.h-arrow.head line, .h-arrow.head path { stroke: var(--green); stroke-width: 2.4px; }
+.h-arrow.head polygon { fill: var(--green); }
+.h-arrow.helm line, .h-arrow.helm path { stroke: var(--red); stroke-width: 2.4px; }
+.h-arrow.helm polygon { fill: var(--red); }
+.h-arrow.wheel path { stroke: var(--red); stroke-width: 1.6px; }
+.h-arrow.wheel polygon { fill: var(--red); }
+.h-arrow.water line { stroke: var(--soft); stroke-width: 1.4px; }
+.h-arrow.water polygon { fill: var(--soft); }
+
+.lbl.h-windlbl { fill: var(--ink); font-weight: 600; }
+.lbl.h-headlbl { fill: var(--green); font-weight: 600; }
+.lbl.h-helmlbl { fill: var(--red); font-weight: 600; }
+.lbl.h-em { fill: var(--ink); font-weight: 500; }
+.lbl.h-head { fill: var(--ink); font-weight: 600; }
+
+.h-sail { fill: var(--sail); stroke: var(--soft); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.h-sail.fa { fill: none; stroke: var(--soft); stroke-width: 1.8px; stroke-linecap: round; }
+.h-sail.becalmed { fill-opacity: 0.4; stroke-dasharray: 3 3; }
+.h-sail.aback { fill: #f3d9d4; stroke: var(--red); }
+.h-sail.shake { fill: none; stroke: var(--red); stroke-width: 1.2px; }
+.h-sail.fa.shake { stroke-dasharray: 2 4; }
+.h-yard.bare { opacity: 0.45; }
+.h-shadow { fill: var(--ink); opacity: 0.07; }
+.h-rudder { stroke: var(--ink); stroke-width: 4px; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+.h-tiller { stroke: var(--red); stroke-width: 2.2px; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+.h-tiller.big { stroke-width: 5px; }
+.h-pivot { fill: var(--sheet); stroke: var(--ink); stroke-width: 1.2px; vector-effect: non-scaling-stroke; }
+
+.h-rim { fill: none; stroke: var(--wood); stroke-width: 4px; vector-effect: non-scaling-stroke; }
+.h-spoke { stroke: var(--wood); stroke-width: 2.2px; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+.h-spoke.king { stroke: var(--red); }
+.h-king { fill: var(--red); }
+.h-stand, .h-barrel { stroke: var(--wood); stroke-width: 3px; vector-effect: non-scaling-stroke; fill: none; }
+.h-barrel { stroke-width: 7px; }
+.h-side { stroke: var(--ink); stroke-width: 1px; vector-effect: non-scaling-stroke; fill: none; }
+.h-sweep { stroke: var(--wood); stroke-width: 3px; vector-effect: non-scaling-stroke; fill: none; opacity: 0.55; }
+.h-mizen, .h-mast { opacity: 0.55; }
+.h-relief { stroke: var(--hemp); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-dasharray: 4 3; fill: none; }
+.h-eye { fill: var(--ink); }
+.h-blade { fill: var(--wood); opacity: 0.8; }
+.h-pintle { stroke: var(--ink); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.rope.thin { stroke-width: 1.3px; }
+
+.h-ring { fill: none; stroke: var(--rule); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.h-tick { stroke: var(--soft); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.h-nogo, .h-foul { fill: var(--red); opacity: 0.1; }
+.h-lift { fill: var(--hemp); opacity: 0.22; }
+.h-course { stroke: var(--soft); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-dasharray: 5 4; }
+.h-made { stroke: var(--green); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.h-part { stroke: var(--ink); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-dasharray: 3 3; }
+.h-clash { fill: none; stroke: var(--red); stroke-width: 2px; vector-effect: non-scaling-stroke; }
+.h-centre { fill: none; stroke: var(--ink); stroke-width: 1.2px; vector-effect: non-scaling-stroke; }
+#points-ship { cursor: pointer; }
+
+.h-next { font-size: 1.15rem; }
+
+/* The drawing is pinned only where the whole of it, with its controls, fits the window. */
+@media (min-width: 1241px) and (min-height: 800px) {
+  .h-fig { position: sticky; top: 12px; }
+  .h-fig svg { max-height: 47vh; }
+  .h-panel { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+  .h-panel .h-read { border-top: 0; padding-top: 2px; margin-top: 12px; }
+}
+@media (max-width: 980px) {
+  .h-sec { grid-template-columns: minmax(0, 1fr); grid-template-areas: 'head' 'fig' 'body'; grid-template-rows: auto; margin-top: 56px; }
+  .h-fig { margin: 4px 0 22px; }
+}
+@media (max-width: 520px) {
+  .h-duo, .h-duo.wide { grid-template-columns: minmax(0, 1fr); }
+  .h-ctl .chip-row h3 { min-width: 100%; }
+}

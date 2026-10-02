@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The ship: spars, sails and standing rigging of a 74</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/ship.css">
+</head>
+<body class="reading">
+  <nav id="site"></nav>
+  <header class="masthead">
+    <div>
+      <h1>The ship</h1>
+      <p class="series">Spars, sails and standing rigging of a 74-gun ship, about 1805</p>
+      <p class="standfirst">You know most of these names. The drawing is here to be flipped back to: every spar and sail, and how often each sail was really set. Below it, the standing rigging in order, with the reasons for it.</p>
+    </div>
+    <div class="contents-box">
+      <p class="contents-ref">For reference: <a href="#reference">the drawing</a>, <a href="#tables">Steel’s dimensions and the sails by mast</a></p>
+      <ol id="contents" class="contents"></ol>
+    </div>
+  </header>
+
+  <section id="reference" class="reference" aria-label="Spars and sails">
+    <div class="controls">
+      <div class="chip-row" id="plan-mode"><h3>Label the</h3></div>
+      <div class="chip-row" id="plan-filter"><h3>Sails by how often set</h3></div>
+    </div>
+    <div class="plan-grid">
+      <figure class="plan-fig">
+        <div class="plan-scroll"><svg id="plan" role="group" aria-label="Sail plan of a 74-gun ship in profile, bow to the right"></svg></div>
+        <figcaption>
+          <p>Profile, bow to the right, to the same geometry as the rest of the tutorial. This is a sail plan, not a view: with the yards square, every square sail would be seen edge-on, so each is drawn as if its yard were braced fore-and-aft and its full shape shows. That is why the sails of neighbouring masts overlap. The spritsail and sprit topsail are left edge-on under the bowsprit. Studding sails are set outside the leeches, on either side or both; one side of each mast is drawn.</p>
+          <p>Spar lengths are Steel’s. Heights, the outlines of the staysails and jibs, and anything drawn dashed are estimates.</p>
+        </figcaption>
+      </figure>
+      <aside id="info" class="detail" aria-live="polite"></aside>
+    </div>
+
+    <div id="tables" class="tables">
+      <section>
+        <h2>The spars, with Steel’s dimensions</h2>
+        <p>From David Steel’s table of 1794, “74 guns, 1799 tons”. His 74 is a large-class ship with a lower deck of 176 feet; a common 74 of the <i>Bellona</i> kind, about 168 feet, would have spars a foot or two shorter throughout. Lengths are reliable. The fractions in the diameters were read from a poor scan and a few may be a quarter of an inch out. A row picks the spar out in the drawing.</p>
+        <table id="spar-table" class="ref"></table>
+      </section>
+      <section>
+        <h2>The sails, by mast</h2>
+        <p>Thirty-two sails, of which about a dozen did the ordinary work. The grading is from Steel (1794), Lever (1808) and Falconer (1769). Dates of introduction and withdrawal are mostly from James Lees’s chronology, which was seen only in snippets and not read in full, so treat them as his and unchecked.</p>
+        <table id="sail-table" class="ref"></table>
+      </section>
+    </div>
+  </section>
+
+  <p class="legend">
+    <span class="key"><i class="k-line"></i> the rope being described</span>
+    <span class="key"><i class="k-dash"></i> position the sources do not give; my guess</span>
+    <span class="key"><i class="k-fast"></i> upper end, at the masthead</span>
+    <span class="key"><i class="k-block"></i> block</span>
+    <span class="key"><i class="k-dot"></i> where it is set up</span>
+    <span class="key"><i class="k-ring"></i> place not named in the sources</span>
+  </p>
+
+  <main id="story"></main>
+
+  <section class="prose closing">
+    <h2>How this is drawn, and how far to trust it</h2>
+    <p>The spars are those of the 74 in David Steel’s tables of 1794, and the mast positions follow his rule. Heights above the water are estimates, good to a few feet. Where a rope comes down on the channel, which side of a mast a stay passes, and where a fall is made fast on deck are mostly not given by the sources; those are drawn dashed or said to be guesses in the text.</p>
+    <p>Steel’s running text describes a 20-gun ship; the 74 comes from his tables, which give ropes, sizes and numbers but not leads. Where the two layers disagree, as over the number of shrouds, the text here says so.</p>
+    <p>Dates of introduction and withdrawal come mostly from James Lees, <i>The Masting and Rigging of English Ships of War 1625–1860</i>. That book was reached only as search snippets. Each date is his, at second hand, and is marked as such where it is used.</p>
+    <p>The ship is rigged as of about 1805: a gaff and not a mizen yard, a brailed mizen with a driver set over it in fair weather, a dolphin striker, a flying jibboom, royals set flying. In 1794 the first four of those would have been different.</p>
+
+    <h2>Sources</h2>
+    <ul class="sources">
+      <li>David Steel, <i>The Elements and Practice of Rigging and Seamanship</i> (London, 1794). <a href="https://maritime.org/doc/steel/">Transcription at maritime.org</a>; the table of masts and yards is <a href="https://maritime.org/doc/steel/large/pg049.htm">page 49</a>, and the rigging tables by rate are page images.</li>
+      <li>Darcy Lever, <i>The Young Sea Officer’s Sheet Anchor</i> (2nd ed., 1819), read in the <a href="https://archive.org/details/youngseaofficers00leve_0">1827 reprint at archive.org</a>. The appendix is new in 1819.</li>
+      <li>William Falconer, <i>An Universal Dictionary of the Marine</i> (1769). <a href="https://www.gutenberg.org/files/57705/57705-h/57705-h.htm">Project Gutenberg</a>.</li>
+      <li>J. J. Moore, <i>The Midshipman’s or British Mariner’s Vocabulary</i> (1801). <a href="https://archive.org/details/midshipmansorbr00moorgoog">archive.org</a>.</li>
+      <li>James Lees, <i>The Masting and Rigging of English Ships of War 1625–1860</i> (1979), and C. Nepean Longridge, <i>The Anatomy of Nelson’s Ships</i> (1955): snippets only.</li>
+      <li>Sam Willis, “The Capability of Sailing Warships, Part 1: Windward Performance”, <i>The Northern Mariner</i> XIII (2003). <a href="https://www.cnrs-scrn.org/northern_mariner/vol13/tnm_13_4_29-39.pdf">cnrs-scrn.org</a>. Modern.</li>
+    </ul>
+  </section>
+
+  <nav id="pager"></nav>
+
+  <script src="js/site.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/standing.js"></script>
+  <script src="js/story-ship.js"></script>
+  <script src="js/context.js"></script>
+  <script src="js/figure.js"></script>
+  <script src="js/describe.js"></script>
+  <script src="js/reader.js"></script>
+  <script src="js/ship.js"></script>
+</body>
+</html>

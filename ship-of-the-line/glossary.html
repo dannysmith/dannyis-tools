@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glossary: rigging a 74</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/glossary.css">
+</head>
+<body>
+  <nav id="site"></nav>
+  <header class="masthead">
+    <div>
+      <h1>Glossary</h1>
+      <p class="series">The running rigging of a 74-gun ship, about 1805</p>
+      <p class="standfirst">Every term of art used in this tutorial, in the form the tutorial uses, with the spellings the period books print. Where Steel, Lever or Falconer defines a word, their definition is quoted. Words that came into use after 1815 are marked.</p>
+    </div>
+  </header>
+
+  <main class="gloss">
+    <section class="gloss-intro">
+      <p>Three books supply most of the quotations: David Steel’s <i>Elements and Practice of Rigging and Seamanship</i> (1794), Darcy Lever’s <i>Young Sea Officer’s Sheet Anchor</i> (1808, quoted from the 1819 text) and William Falconer’s <i>Universal Dictionary of the Marine</i> (1769). They do not spell alike. Steel writes clue-line, haliard, jears, tye, parral, laniard and pendent; Lever writes clew-line, halliards, jears, tye and parral; Falconer writes clue-line, haliards, jears, parrel and tye. The tutorial uses one form of each and gives the others here.</p>
+      <p>A definition with no quotation is in the tutorial’s own words, from how the period books use the term. The few that rest on general knowledge say so.</p>
+    </section>
+
+    <div class="gloss-tools">
+      <label class="find">Find a term
+        <input id="filter" type="search" placeholder="clue-line, halyard, stunsail…" autocomplete="off" spellcheck="false">
+      </label>
+      <label class="check"><input id="later-only" type="checkbox"> Only terms later than the period</label>
+      <span id="count" class="count" aria-live="polite"></span>
+      <nav id="letters" class="letters" aria-label="Letters"></nav>
+    </div>
+
+    <div id="glossary"></div>
+
+    <section class="gloss-sources">
+      <h2>Sources</h2>
+      <ul>
+        <li>David Steel, <i>The Elements and Practice of Rigging and Seamanship</i> (London, 1794). <a href="https://maritime.org/doc/steel/">Transcription at maritime.org</a>. “Rigging terms” and “glossary” mean his “Explanation of the Terms used in Rigging”, pp.161–180; “sea terms” his list in the seamanship part.</li>
+        <li>Darcy Lever, <i>The Young Sea Officer’s Sheet Anchor</i> (1808; 2nd ed., 1819), read in the <a href="https://archive.org/details/youngseaofficers00leve_0">1827 reprint at archive.org</a>.</li>
+        <li>William Falconer, <i>An Universal Dictionary of the Marine</i> (1769), cited by headword. <a href="https://www.gutenberg.org/files/57705/57705-h/57705-h.htm">Project Gutenberg</a>.</li>
+        <li>J. J. Moore, <i>The Midshipman’s or British Mariner’s Vocabulary</i> (1801; 1805 printing).</li>
+        <li>Later books, used for terms and orders and marked as later: W. N. Glascock (Royal Navy, 1836), R. H. Dana (US merchant, 1841), W. Brady (US Navy, 1848), J. M. Boyd (Royal Navy, 1860), B. J. Totten (US Navy, 1862), G. S. Nares (Royal Navy, 1862), S. B. Luce (US Navy, 1866), W. H. Smyth, <i>The Sailor’s Word-Book</i> (1867), J. Masefield, <i>Sea Life in Nelson’s Time</i> (1905).</li>
+        <li>James Lees, <i>The Masting and Rigging of English Ships of War 1625–1860</i>, is cited only from snippets and second-hand reports, and the entries say so.</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav id="pager"></nav>
+
+  <script src="js/site.js"></script>
+  <script src="js/glossary.js"></script>
+</body>
+</html>

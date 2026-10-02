@@ -1,0 +1,301 @@
+/* Colours follow the ship and the draughtsman's sheet: running rigging is
+   hemp-coloured, spars are wood, standing rigging is tarred dark. The chosen
+   line is in the red ink Admiralty draughts used for alterations, and belaying
+   points in their green. */
+:root {
+  --paper: #eceff0;
+  --sheet: #f6f7f4;
+  --ink: #17222b;
+  --soft: #56636b;
+  --rule: #b9c2c4;
+  --hemp: #9a8452;
+  --wood: #5d4c34;
+  --red: #b4261a;
+  --green: #1c6a50;
+  --sail: #fbfaf3;
+  --sea: #cbd8da;
+  --hull: #dde1d8;
+  --serif: 'Libre Caslon Text', 'Big Caslon', 'Hoefler Text', Georgia, serif;
+  --sans: 'Libre Franklin', 'Helvetica Neue', Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+
+/* The bar of pages across the top of every page */
+#site { max-width: 1480px; margin: 0 auto; padding: 12px clamp(16px, 3vw, 44px) 0; display: flex; flex-wrap: wrap; gap: 4px 18px; font: 500 0.8rem/1.5 var(--sans); }
+#site a { text-decoration: none; color: var(--soft); }
+#site a:hover { color: var(--ink); }
+#site a[aria-current='page'] { color: var(--ink); border-bottom: 2px solid var(--red); }
+#pager { max-width: 1480px; margin: 0 auto 80px; padding: 24px clamp(16px, 3vw, 44px) 0; display: flex; justify-content: space-between; gap: 24px; font-size: 1.05rem; }
+#pager a { text-decoration: none; border-bottom: 1px solid var(--hemp); }
+#pager span { display: block; font: 400 0.76rem/1.4 var(--sans); color: var(--soft); }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.62 var(--serif);
+}
+
+a { color: inherit; text-decoration-color: var(--hemp); text-underline-offset: 0.18em; }
+a:hover { text-decoration-color: var(--red); }
+:focus-visible { outline: 2px solid var(--red); outline-offset: 2px; }
+
+.masthead,
+main { max-width: 1480px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 44px); }
+
+.masthead { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: end; gap: 24px 48px; padding-top: clamp(28px, 5vw, 64px); padding-bottom: 20px; }
+
+/* The sail picker: three masts across, bow to the right, sails stacked as on
+   the ship and narrowing towards the royals. */
+#sails { display: grid; grid-template-columns: repeat(3, minmax(0, 132px)); gap: 5px 10px; justify-items: center; }
+#sails .mast-name { font: italic 400 0.9rem var(--serif); color: var(--soft); }
+#sails button {
+  width: calc(var(--w) * 100%);
+  min-width: max-content;
+  font: 500 0.76rem/1 var(--sans);
+  color: var(--ink);
+  background: var(--sail);
+  border: 1px solid var(--soft);
+  border-radius: 1px;
+  padding: 7px 6px;
+  cursor: pointer;
+}
+#sails button:hover { border-color: var(--ink); }
+#sails select { grid-column: 1 / -1; width: 100%; margin-top: 6px; padding: 6px; font: 500 0.78rem/1.2 var(--sans); color: var(--ink); background: var(--sheet); border: 1px solid var(--soft); border-radius: 1px; }
+#sails button[aria-pressed='true'] { background: var(--red); border-color: var(--red); color: #fff; }
+.masthead h1 {
+  margin: 0;
+  font-weight: 400;
+  font-size: clamp(2.7rem, 7vw, 5.4rem);
+  line-height: 0.98;
+  letter-spacing: -0.02em;
+}
+.series { margin: 0.7rem 0 0; font-style: italic; font-size: 1.15rem; color: var(--soft); }
+.standfirst { max-width: 62ch; margin: 1.1rem 0 0; }
+
+/* The list of lines */
+#lines { border-top: 1px solid var(--ink); padding: 14px 0 6px; }
+.chip-row { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 6px; margin-bottom: 10px; }
+.chip-row h3 { margin: 0 8px 0 0; min-width: 9.5em; font: italic 400 1rem var(--serif); color: var(--soft); }
+.chip-row button {
+  font: 500 0.82rem/1 var(--sans);
+  color: var(--ink);
+  background: transparent;
+  border: 1px solid var(--ink);
+  border-radius: 2px;
+  padding: 7px 10px;
+  cursor: pointer;
+}
+.chip-row button.undrawn { border-style: dotted; }
+.chip-row button:hover { background: var(--sheet); }
+.chip-row button[aria-pressed='true'] { background: var(--red); border-color: var(--red); border-style: solid; color: #fff; }
+
+/* Diagrams beside the description */
+.bench { display: grid; grid-template-columns: minmax(0, 1fr) minmax(300px, 400px); gap: 28px; align-items: start; }
+.stage { display: grid; grid-template-columns: minmax(0, 0.63fr) minmax(0, 1fr); gap: 14px 18px; }
+#view-aft { grid-row: span 2; }
+
+.fig { margin: 0; }
+.fig svg { display: block; width: 100%; height: auto; background: var(--sheet); border: 1px solid var(--rule); }
+.fig figcaption {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+  padding-top: 6px;
+  font: 400 0.78rem/1.45 var(--sans);
+  color: var(--soft);
+}
+.fig figcaption b { color: var(--ink); font-weight: 600; }
+.fig figcaption button {
+  flex: none;
+  font: 500 0.75rem/1 var(--sans);
+  color: var(--ink);
+  background: none;
+  border: 0;
+  border-bottom: 1px solid var(--hemp);
+  padding: 2px 0;
+  cursor: pointer;
+}
+
+.stage[data-zoom] { grid-template-columns: minmax(0, 1fr); }
+.stage[data-zoom] .fig svg { height: 86vh; }
+.stage[data-zoom='aft'] .fig:not(#view-aft),
+.stage[data-zoom='side'] .fig:not(#view-side),
+.stage[data-zoom='plan'] .fig:not(#view-plan) { display: none; }
+
+/* Keys */
+.key { display: inline-flex; align-items: center; gap: 6px; margin-right: 14px; white-space: nowrap; }
+.fig .key { display: flex; white-space: normal; margin: 2px 0 0; }
+.key i { flex: none; display: inline-block; width: 10px; height: 10px; }
+.k-dot { border-radius: 50%; background: var(--green); }
+.k-sq { background: var(--green); }
+.k-ring { border-radius: 50%; border: 2px solid var(--green); }
+.k-fast { background: var(--red); width: 8px !important; height: 8px !important; }
+.k-block { border-radius: 50%; border: 1.5px solid var(--red); }
+.k-line, .k-dash { width: 26px !important; height: 0 !important; border-top: 2px solid var(--red); }
+.k-dash { border-top-style: dashed; }
+.legend { margin: 18px 0 0; padding-top: 10px; border-top: 1px solid var(--rule); font: 400 0.78rem/2 var(--sans); color: var(--soft); }
+
+/* Inside the drawings. --u is feet per screen pixel, set from script, so text
+   and markers keep a constant size on screen whatever the scale. */
+.sea { fill: var(--sea); }
+.hull { fill: var(--hull); stroke: var(--ink); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+.well { fill: #cfd5cd; }
+.deck { stroke: var(--ink); stroke-width: 0.7px; vector-effect: non-scaling-stroke; opacity: 0.7; }
+.deck.below { stroke-dasharray: 5 4; opacity: 0.45; }
+.spar { fill: var(--wood); }
+.sparline { stroke: var(--wood); stroke-linecap: round; }
+.sparline.overhead { opacity: 0.35; }
+.channel { fill: var(--wood); opacity: 0.45; }
+.bitts { stroke: var(--ink); stroke-width: 3px; vector-effect: non-scaling-stroke; stroke-linecap: square; }
+.port { fill: var(--ink); opacity: 0.28; }
+.standing { stroke: var(--ink); stroke-width: 0.8px; vector-effect: non-scaling-stroke; opacity: 0.3; }
+.sail { fill: var(--sail); stroke: var(--soft); stroke-width: 0.8px; vector-effect: non-scaling-stroke; }
+.sail.edge { fill: none; stroke-width: 1.6px; }
+.sail.other { fill-opacity: 0.35; stroke-opacity: 0.4; }
+.lbl {
+  font: 400 calc(var(--u, 1) * 10.5px) var(--sans);
+  fill: var(--soft);
+  paint-order: stroke;
+  stroke: var(--sheet);
+  stroke-width: calc(var(--u, 1) * 3px);
+  stroke-linejoin: round;
+}
+
+.rope { stroke: var(--hemp); stroke-width: 1.1px; vector-effect: non-scaling-stroke; stroke-linecap: round; fill: none; }
+.rope.standing-rig { stroke: var(--ink); opacity: 0.55; }
+.rope.sel.standing-rig { stroke: var(--red); opacity: 1; }
+.rope.inferred { stroke-dasharray: 5 4; }
+.rope.stub { stroke-dasharray: 1 4; }
+.hit { stroke: transparent; stroke-width: 11px; vector-effect: non-scaling-stroke; pointer-events: stroke; }
+g.line { cursor: pointer; }
+g.line:hover .rope, g.line.hover .rope { stroke: var(--ink); stroke-width: 1.8px; }
+.top { pointer-events: none; }
+.rope.sel { stroke: var(--red); stroke-width: 2.3px; }
+.rope.sel.port { stroke-width: 1.3px; opacity: 0.5; }
+.rope.sel.marked.port { stroke-width: 2.3px; opacity: 1; }
+.block { fill: var(--sheet); stroke: var(--red); stroke-width: 1.5px; vector-effect: non-scaling-stroke; }
+.fast { fill: var(--red); }
+.belay { fill: var(--green); stroke: var(--sheet); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.belay.inferred { fill: var(--sheet); stroke: var(--green); stroke-width: 1.8px; }
+.belay.rest.inferred { stroke-width: 1.2px; }
+.badge { fill: var(--sheet); stroke: var(--red); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.badge-num { font-family: var(--sans); font-weight: 600; fill: var(--red); text-anchor: middle; dominant-baseline: central; }
+.belay-lbl { fill: var(--green); font-weight: 600; }
+
+/* The description of the chosen line */
+.detail {
+  padding: 0 4px 12px 0;
+  font-size: 0.94rem;
+  line-height: 1.58;
+}
+.detail h2 { margin: 0; font-weight: 400; font-size: 1.9rem; line-height: 1.12; letter-spacing: -0.01em; }
+.detail .also { margin: 0.35rem 0 0; font-style: italic; color: var(--soft); }
+.detail h5 { margin: 1.15rem 0 0.2rem; font: 600 0.78rem/1.3 var(--sans); color: var(--red); }
+.detail p { margin: 0 0 0.55rem; }
+
+/* The essay under the diagrams */
+.prose { max-width: 68ch; margin: 56px 0 96px; }
+.prose h2 { margin: 2.6rem 0 0.4rem; padding-top: 0.9rem; border-top: 1px solid var(--ink); font-weight: 400; font-size: 1.9rem; line-height: 1.15; letter-spacing: -0.01em; }
+.prose h3 { margin: 1.5rem 0 0.2rem; font-weight: 700; font-size: 1.02rem; }
+.prose p { margin: 0 0 0.9rem; }
+.prose ul { padding-left: 1.1rem; }
+.prose li { margin-bottom: 0.5rem; }
+
+/* The table of sails against lines */
+.matrix-wrap { overflow-x: auto; margin: 0.6rem 0 0; }
+#matrix { border-collapse: collapse; font: 400 0.82rem/1.35 var(--sans); }
+#matrix thead th { padding: 0 4px 8px; vertical-align: bottom; font-weight: 500; width: 4.6rem; }
+#matrix tbody th { padding: 5px 14px 5px 0; text-align: left; font-weight: 500; white-space: nowrap; }
+#matrix td { padding: 5px 4px; text-align: center; border-top: 1px solid var(--rule); }
+#matrix tbody th { border-top: 1px solid var(--rule); }
+#matrix thead td { border: 0; }
+#matrix .m-y { color: var(--ink); }
+#matrix .m-n { color: var(--rule); }
+#matrix .m-q { color: var(--red); font-weight: 600; }
+#matrix .note { text-align: left; padding-left: 14px; color: var(--soft); min-width: 22rem; }
+
+@media (max-width: 1020px) {
+  .bench { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 640px) {
+  .stage { grid-template-columns: minmax(0, 1fr); }
+  .chip-row h3 { min-width: 100%; }
+}
+
+/* ---- The reading page ---------------------------------------------------
+   Each chapter pins its drawing in the left column for as long as its steps
+   are scrolling past on the right. */
+.reading .legend { max-width: 1480px; margin: 0 auto; padding: 10px clamp(16px, 3vw, 44px) 0; border-top: 0; }
+.contents { margin: 0; padding: 0 0 0 1.2rem; font-size: 0.98rem; line-height: 1.7; }
+.contents a { text-decoration: none; border-bottom: 1px solid var(--hemp); }
+
+.chapter { margin-top: 72px; }
+.chapter > header { max-width: 64ch; padding-top: 18px; border-top: 1px solid var(--ink); }
+.chapter-no { margin: 0; font-style: italic; color: var(--soft); }
+.chapter h2 { margin: 0.2rem 0 0.8rem; font-weight: 400; font-size: clamp(1.9rem, 3.4vw, 2.9rem); line-height: 1.08; letter-spacing: -0.015em; }
+.chapter > header p { margin: 0 0 0.8rem; }
+
+.cols { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr); gap: clamp(24px, 4vw, 64px); align-items: start; }
+.pinned { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; gap: 8px; padding: 14px 0 10px; }
+.pinned svg { display: block; width: 100%; min-height: 0; background: var(--sheet); border: 1px solid var(--rule); }
+.pinned svg[hidden] { display: none; }
+.pinned svg[data-view='aft'] { flex: 1 1 0; }
+.pinned svg[data-view='side'] { flex: 209 1 0; }
+.pinned svg[data-view='plan'] { flex: 102 1 0; }
+.pinned .caption { margin: 0; font: 400 0.76rem/1.4 var(--sans); color: var(--soft); }
+
+.steps { max-width: 58ch; padding: 30vh 0 45vh; }
+.job { margin: 4.5rem 0 1.2rem; }
+.job:first-child { margin-top: 0; }
+.job h3 { margin: 0 0 0.4rem; font-weight: 400; font-size: 1.65rem; line-height: 1.15; letter-spacing: -0.01em; }
+.job p { margin: 0; }
+
+.step { margin: 0 0 0 -22px; padding: 14px 0 18px 20px; border-left: 2px solid transparent; cursor: pointer; font-size: 0.97rem; line-height: 1.6; }
+.step.active { border-left-color: var(--red); }
+.step:not(.active) .lead li::before { color: var(--soft); border-color: var(--rule); }
+.step h4 { margin: 0 0 0.3rem; font-weight: 700; font-size: 1.16rem; line-height: 1.25; }
+.step * + h4 { margin-top: 1.4rem; }
+.step.active h4:first-child { color: var(--red); }
+.step h5 { margin: 0.9rem 0 0.15rem; font: 600 0.76rem/1.3 var(--sans); color: var(--soft); }
+.step p { margin: 0 0 0.5rem; }
+.step .also { font-style: italic; color: var(--soft); }
+.step details { margin-top: 0.6rem; font-size: 0.9rem; }
+.step summary { cursor: pointer; font: 500 0.78rem/1.6 var(--sans); color: var(--soft); }
+.step details p { margin: 0.4rem 0 0; }
+
+/* Shared by the step text and the lookup panel */
+.lead { margin: 0; padding: 0; list-style: none; counter-reset: step; }
+.lead li { position: relative; padding: 0 0 0.45rem 2rem; counter-increment: step; }
+.lead li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0.18rem;
+  width: 1.3rem;
+  height: 1.3rem;
+  border: 1px solid var(--red);
+  border-radius: 50%;
+  font: 600 0.7rem/1.25rem var(--sans);
+  color: var(--red);
+  text-align: center;
+}
+.lead li.inferred::before { border-style: dashed; }
+.tag { display: inline-block; margin-right: 0.5em; padding: 0 6px; border: 1px dashed var(--green); font: 500 0.72rem/1.6 var(--sans); color: var(--green); }
+.refs { font: 400 0.8rem/1.6 var(--sans); color: var(--soft); }
+
+.closing, .reading .matrix-wrap { max-width: 1480px; margin-left: auto; margin-right: auto; padding: 0 clamp(16px, 3vw, 44px); }
+.closing { margin-top: 56px; margin-bottom: 0; }
+.closing > * { max-width: 68ch; }
+.reading .matrix-wrap { margin-bottom: 0; }
+.closing:last-of-type { margin-bottom: 96px; }
+
+@media (max-width: 900px) {
+  .cols { grid-template-columns: minmax(0, 1fr); }
+  .pinned { height: 46vh; z-index: 2; background: var(--paper); padding: 8px 0 6px; }
+  .pinned .caption { display: none; }
+  .steps { padding: 2rem 0 30vh; }
+  .step { margin-left: 0; padding-left: 14px; }
+}

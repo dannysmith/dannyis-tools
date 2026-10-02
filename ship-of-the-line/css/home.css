@@ -1,0 +1,10 @@
+/* The contents page. */
+#hero { display: block; width: calc(100% - 2 * clamp(16px, 3vw, 44px)); max-width: 1392px; max-height: 62vh; margin: 8px auto 0; background: var(--sheet); border: 1px solid var(--rule); }
+.home { margin-top: 40px; }
+.pages { margin: 0; padding: 0; list-style: none; counter-reset: page; display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 0 40px; }
+.pages li { counter-increment: page; padding: 16px 0 14px; border-top: 1px solid var(--ink); }
+.pages a { font-size: 1.45rem; line-height: 1.2; text-decoration: none; }
+.pages a::before { content: counter(page) '. '; color: var(--soft); }
+.pages a:hover { color: var(--red); }
+.pages p { margin: 0.35rem 0 0; font-size: 0.95rem; line-height: 1.5; color: var(--soft); }
+.also-pages { margin: 28px 0 0; }

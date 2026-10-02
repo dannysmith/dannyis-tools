@@ -1,0 +1,15 @@
+/* Additions for the studding sails page: orders quoted from later manuals,
+   and the small sketch of weather and lee studding sails seen from above. */
+
+.order { margin: 0.5rem 0 0.7rem; padding: 0.15rem 0 0.15rem 0.9rem; border-left: 3px solid var(--hemp); }
+.order b { display: block; font-weight: 700; }
+.order span { display: block; font: 400 0.76rem/1.5 var(--sans); color: var(--soft); }
+
+.sketch { display: block; width: 100%; max-width: 380px; height: auto; margin: 0.6rem 0 0.9rem; background: var(--sheet); border: 1px solid var(--rule); }
+.sketch text { font: 400 11px var(--sans); fill: var(--soft); }
+.sk-ship { fill: var(--hull); stroke: var(--rule); stroke-width: 1; }
+.sk-yard { stroke: var(--wood); stroke-width: 4; stroke-linecap: round; }
+.sk-sail { stroke: var(--soft); stroke-width: 2; }
+.sk-stun { stroke: var(--red); stroke-width: 2.5; stroke-linecap: round; }
+.sk-wind { stroke: var(--ink); stroke-width: 1.5; }
+.sk-head { fill: var(--ink); }

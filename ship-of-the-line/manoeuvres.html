@@ -1,0 +1,246 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Manoeuvres: rigging a 74</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/manoeuvres.css">
+</head>
+<body class="reading manoeuvres">
+  <nav id="site"></nav>
+  <header class="masthead">
+    <div>
+      <h1>Manoeuvres</h1>
+      <p class="series">Working a 74-gun ship, about 1805, order by order</p>
+      <p class="standfirst">Each evolution is a sequence of orders. Step through it: the drawing shows the ship from above with the wind at the top of the sheet, the text beside it gives the order in the period’s words and says which ropes are let go and which hauled, and the deck plan underneath shows where on deck that work is done. The left and right arrow keys step whichever evolution is in the middle of the window.</p>
+    </div>
+    <ol id="contents" class="contents"></ol>
+  </header>
+
+  <p class="legend">
+    <span class="key"><svg viewBox="0 0 44 18"><path d="M2 14 Q22 -8 42 14 Z" class="mv-sail full"/><line x1="0" y1="14" x2="44" y2="14" class="sparline" stroke-width="2"/></svg> full, drawing ahead</span>
+    <span class="key"><svg viewBox="0 0 44 18"><path d="M2 5 Q22 20 42 5 Z" class="mv-sail aback"/><line x1="0" y1="5" x2="44" y2="5" class="sparline" stroke-width="2"/></svg> aback, the wind on its fore side</span>
+    <span class="key"><svg viewBox="0 0 44 18"><path d="M2 9 Q7 4 12 9 Q17 14 22 9 Q27 4 32 9 Q37 14 42 9" class="mv-sail shiver"/></svg> shivering, edge-on to the wind</span>
+    <span class="key"><svg viewBox="0 0 44 18"><path d="M2 10 Q22 5 42 10 Z" class="mv-sail becalmed"/><line x1="0" y1="10" x2="44" y2="10" class="sparline" stroke-width="2"/></svg> becalmed by another sail</span>
+    <span class="key"><svg viewBox="0 0 44 18"><line x1="3" y1="9" x2="41" y2="9" class="mv-hung" stroke-width="5"/><line x1="0" y1="9" x2="44" y2="9" class="sparline" stroke-width="2"/></svg> loosed or clewed up, hanging in its gear</span>
+    <span class="key"><svg viewBox="0 0 44 18"><line x1="0" y1="9" x2="44" y2="9" class="sparline" stroke-width="2"/></svg> furled: bare yard</span>
+    <span class="key"><svg viewBox="0 0 44 18"><line x1="4" y1="9" x2="24" y2="9" class="mv-tiller"/><line x1="24" y1="9" x2="40" y2="9" class="mv-rudder"/></svg> tiller (thin) and rudder</span>
+    <span class="key"><svg viewBox="0 0 44 18"><path d="M4 9 L38 9 M30 4 L38 9 L30 14" class="mv-way"/></svg> way through the water</span>
+  </p>
+
+  <section class="prose intro" id="reading">
+    <h2>What the drawings can and cannot tell you</h2>
+    <p>On each mast the yards are drawn at the angle they are braced to, the lower yard longest, and each sail as a belly on its yard: the course widest, the topsail and topgallant inside it. A sail that bulges towards the bow is full. One that bulges aft, in red, is aback. Whether a sail is full, shivering or aback is worked out from the wind and the angle of its yard, so the picture follows from the geometry. It is right in kind and no more: the angles are round figures, the track is a sketch, and nothing here is a simulation of a ship.</p>
+    <p>The headings and the wind are Darcy Lever’s. In his worked examples the wind is at ENE and a ship close-hauled lies six points from it: head north on the starboard tack, head SE on the larboard. Where he gives her heading at an order, it is shown above the order.</p>
+    <p>Helm orders in this period name the tiller, so “helm a-lee” puts the tiller to leeward and turns her head to windward. Each step says what the helm is doing; the convention, the wheel and the helm orders themselves are on the <a href="handling.html">steering and theory</a> page.</p>
+    <p>The gaff sail on the mizen mast is called the mizen, as Lever calls it. His “driver” and “spanker” are fair-weather sails set in its place. Larboard is the left side of the ship; the helm order for that side was already “port”.</p>
+
+    <h2>Who does the hauling</h2>
+    <p>The period manuals say what is done to the ropes and almost never who does it. The ship’s company of a 74 was 590 to 650 on paper. It was divided by skill (this is Masefield’s account of 1905, drawn from memoirs): forecastle men, the older prime seamen, who work the anchors, the bowsprit, the head sails and the fore yard; fore, main and mizen topmen, who work aloft; the after-guard, who “worked the after braces, the spanker, main-sail, and lower stay-sails”; the waisters, who “hauled aft the fore and main sheets”; the marines; and the idlers, who stand no watch but turn out when all hands are called.</p>
+    <p>The table sets those divisions against the station lists in two American manuals of the 1840s and 1860s (Brady, Totten). It is inference throughout, and it is what the steps on this page mean when they say who does something.</p>
+    <div class="wide">
+      <table class="mv-table">
+        <thead><tr><th>Body</th><th>Station for tacking or wearing</th></tr></thead>
+        <tbody>
+          <tr><th>Forecastle men</th><td>Jib and fore topmast staysail sheets, fore tack, fore bowline, head bowlines, spritsail yard braces and jib guys; later the head braces</td></tr>
+          <tr><th>Fore topmen on deck</th><td>Fore sheet, head braces, fore clew-garnets; a few aloft at the breast backstays</td></tr>
+          <tr><th>Main topmen on deck</th><td>Main tack and bowline, main clew-garnets, main top bowline</td></tr>
+          <tr><th>After-guard, mizen topmen, marines</th><td>Main braces, crossjack and mizen topsail braces, main sheet, mizen brails and sheet</td></tr>
+          <tr><th>Waisters</th><td>Tail on to the main braces, then run forward to the head braces; fore and main sheets</td></tr>
+          <tr><th>Quartermaster and helmsmen</th><td>Conn and wheel</td></tr>
+          <tr><th>Idlers</th><td>On deck when all hands are called, tailing on where told</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p>How many men went to each rope is not known. None of the sources read gives a count of men on the main brace or the topsail halliards for a ship of this size, and no station bill with numbers for a 74 of 1790–1815 was found.</p>
+  </section>
+
+  <section class="chapter" id="making-sail" data-manoeuvre="making-sail">
+    <div class="mv-notes">
+      <h3>What is period and what is later</h3>
+      <p>The words “trice up”, “let fall” and “sheet home” are common to the RN and USN books. The RN has “away aloft” and “lie out” (1836) or “lay out” (1862); the USN has “lay aloft”, “lay out and loose”, “lay in” and “lay down from aloft”. All of these are from 1836 or later. For 1790–1815 the sources give the actions and Steel’s phrase “loose the topsails and heave out the staysails”, and no drill.</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="trimming" data-manoeuvre="trimming"></section>
+
+  <section class="chapter" id="tacking" data-manoeuvre="tacking">
+    <div class="mv-notes">
+      <h3>Why the after yards are hauled first while the head yards stay aback</h3>
+      <ol>
+        <li>The after sails are blanketed at that moment: “the after sails being becalmed by the head ones” (Lever), so the yards are light to swing and the main tack comes down by hand. Steel gives this as his first reason (p. 318).</li>
+        <li>The weather leeches help. With the wind a point or two on the weather bow, the weather half of each after sail is aback while the lee half is in the lee of the head sails, and the wind throws the yard round.</li>
+        <li>Left on the old trim, the after sails fight the turn. Once the wind is inside the angle of the yards, after sails still braced for the old tack are aback and push the stern to windward. Braced round, they push it to leeward. Steel, of the mizen topsail: braced about “it will then impel the stern to leeward… whereas, if it were continued in its first situation, it would retard the circular motion of the ship, by impelling the after part to windward” (p. 317).</li>
+        <li>The head yards aback are what carry the bow through and off. They are forward of the point she turns about; aback, they push the bow away from the wind, first across it and then down on to the new tack. Falconer: the head sails “are accordingly laid aback on the lee-side, to push the vessel’s fore-part towards the opposite side, till she has fallen into the line of her course thereon.”</li>
+        <li>The after yards are then ready to fill. As she falls off on the new tack the after sails fill first and give headway, and being abaft the centre they bring her up to the wind. Only then are the head yards swung.</li>
+      </ol>
+
+      <h3>When to haul the mainsail: eleven statements, and they do not agree</h3>
+      <div class="wide">
+        <table class="mv-table">
+          <thead><tr><th>Author</th><th>Date, navy</th><th>When to haul the after yards</th></tr></thead>
+          <tbody>
+            <tr><th>Falconer; Moore</th><td>1769; 1805, British</td><td>“When the ship has turned her head directly to windward”</td></tr>
+            <tr><th>Hutchinson, copied by Steel p. 319</th><td>1777, British</td><td>“when the wind is a point on the weather bow” (rough sea, doubtful staying)</td></tr>
+            <tr><th>Gower, copied by Steel p. 281*</th><td>1793, British</td><td>head “about a point and a half from the wind”</td></tr>
+            <tr><th>Steel p. 316 (Bourdé)</th><td>1794</td><td>“when the wind is right a-head, or even a little before”</td></tr>
+            <tr><th>Lever, the old method, p. 76</th><td>before 1808</td><td>“head to wind”, which he calls an error</td></tr>
+            <tr><th>Lever p. 77; p. 92 (head sea)</th><td>1808, British</td><td>“about a point and a half on the weather bow”; “a point on the weather bow”</td></tr>
+            <tr class="later"><th>Dana</th><td>1841, US merchant</td><td>“within a point or a point and a half of the wind”</td></tr>
+            <tr class="later"><th>Totten, Luce</th><td>1860s, USN</td><td>“The general rule, and a safe one, is to do so when the wind is directly ahead. But with a good working breeze… when the wind is about one point on the bow”</td></tr>
+            <tr class="later"><th>Boyd</th><td>1860, RN</td><td>When the weather outer cloths of the main topsail are aback and the sail bellies aft: “The wind will then have been about two or more points on the bow”</td></tr>
+            <tr class="later"><th>Nares</th><td>1862, RN</td><td>“a point and a half, or a point from the bow, according to the force of the wind”</td></tr>
+            <tr class="later"><th>Alston</th><td>1860, RN</td><td>“when the wind is ahead, as a general rule, or, in quick working ships, a little before, taking the main top-sail as your guide”</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p>The British sources of the period split. The dictionary tradition (Falconer, Moore) says head to wind. The practical seamen (Hutchinson, Gower, Lever) say a point to a point and a half before it, and Lever presents the earlier haul as the modern improvement. The rows in grey are later books.</p>
+      <p>What the moment depends on: “the strength of the wind and the qualities of the vessel” (Totten); her way through the water (Nares: “If a ship has lost her way through the water, the main yard must not be hauled until the wind is right ahead”); and the look of the main topsail itself (Boyd, Alston).</p>
+      <p>Too late, the yards come round heavily and she falls off before she is trimmed. Nares explains why the help is lost once she is past the wind: “the weather side is becalmed, and the lee side is full of wind, the sail being aback, therefore it cannot come forward by itself.”</p>
+      <p>Too early is less tidy in the sources. A modern writer, Sam Willis, says that “if the order for ‘mainsail haul’ was given too early, the ship would surely hang in irons”, and cites no period text for it. Steel says an earlier haul makes the turn faster but “ought not to be attended to, except when the ship has lost her velocity, and the rudder its power”. Alston treats it as a tool: to fore-reach in stays “haul the main yard the moment you can insure her staying”; to avoid fore-reaching “make a late haul of the main yard”. My reading, which no source states in one place: after yards swung while the wind is still well out on the bow meet it more squarely aback than on their old trim, so they turn her faster but stop her sooner, and hauling early is safe only once she is sure to come round.</p>
+
+      <h3>The helm in stays</h3>
+      <p>While she has headway the helm is a-lee. When headway ceases it is righted or shifted, because with sternway the rudder turns her the other way. After the head yards are hauled she may have sternway and fall off fast, so the helm is put a-weather for the new tack to check her. Hutchinson, in Steel p. 319: “the helm should not then be shifted a-lee, but should be kept hard a-weather, till her sternway ceases… Shift the helm a-lee when the sternway ceases.” Falconer’s shorter version has her “checked by the effort of the helm, which for that purpose is put hard a-lee” as she falls off.</p>
+
+      <h3>Against a head sea</h3>
+      <p>Lever p. 92. The fore topmast staysail is hauled down first, because the sea “will continue to strike on the weather bow on every attempt to tack, and tend to pay her head off again”. She is luffed “taking advantage of the smoothest water”, and the fore sheet let go. “Mainsail haul!” is given at a point on the weather bow, with “the main tack, sheet, after bowlines, and lee braces” all let go at once and no separate order for tacks and sheets. “Let go and haul!” follows immediately the wind is on the new bow, “but the weather braces are kept in”. When she gets headway the helm is righted, and the fore topmast staysail is hoisted again.</p>
+
+      <h3>The orders side by side</h3>
+      <div class="wide">
+        <table class="mv-table orders">
+          <thead><tr><th>Stage</th><th>Falconer 1769</th><th>Hutchinson 1777</th><th>Gower 1793, Steel 1794</th><th>Moore 1805</th><th>Lever 1808</th><th>Dana 1841, US merchant</th><th>Totten 1862, Luce 1866, USN</th><th>Alston 1860, Nares 1862, RN</th></tr></thead>
+          <tbody>
+            <tr><th>Warning</th><td>none given</td><td>“every thing should be ready and clear, the people properly stationed”</td><td>“About ship!”; “Ready about!”</td><td>none given</td><td>“ready about there!”</td><td class="later">“Ready, About!”</td><td class="later">“Ready about!” then “Ready! Ready! Ease down the helm!”</td><td class="later">“Ready, O!” (Alston); “Ready all.” “Ease the helm down.” (Nares)</td></tr>
+            <tr><th>Helm down</th><td>“Helm’s a-lee!”</td><td>“order the helm hard a-lee with a loud voice”</td><td>“put the helm a-lee”</td><td>“Helm’s a-lee”</td><td>“The Helm’s a-lee!”</td><td class="later">“Helm’s a-lee!”</td><td class="later">“Helm’s alee!”</td><td class="later">“Helm’s a-lee!”</td></tr>
+            <tr><th>Tacks and sheets</th><td>“Up tacks and sheets!”</td><td>“To off tacks and sheets”</td><td>“raise tacks and sheets”</td><td>“Raise tacks and sheets”</td><td>“Off Tacks and Sheets!”</td><td class="later">“Raise tacks and sheets!”</td><td class="later">“Rise tacks and sheets!” or “Rise main tack and sheet!”</td><td class="later">“Raise tacks and sheets”</td></tr>
+            <tr><th>After yards</th><td>“Haul main-sail, haul!”</td><td>“haul mainsail”</td><td>“main-sail haul!”</td><td>“Haul main-sail, haul”</td><td>“Main-sail Haul!”</td><td class="later">“Mainsail haul!”</td><td class="later">“Haul taut! Mainsail haul!”</td><td class="later">“Haul well taut; mainsail haul!” (Alston); “Mainsail haul” (Nares)</td></tr>
+            <tr><th>Head yards</th><td>“Haul of all! or, Let go, and haul!”</td><td>“haul off all”</td><td>“let go and haul”</td><td>“Haul of all, or Let go and haul”</td><td>“Let Go and Haul!”</td><td class="later">“Let go and haul!”</td><td class="later">“Haul well taut! Let go and haul!”</td><td class="later">“Fore tack, head bowlines — Of all haul!” (Alston); “Of all haul” (Nares)</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <ul>
+        <li>“Haul of all” changes its meaning. In Falconer, Hutchinson and Moore it is another way of saying “let go and haul”, for the head yards. In Dana and Totten “Haul of all!” means swinging every yard at once, a show of smartness in a light breeze. In the RN of the 1860s “Of all haul” is the head-yard order again.</li>
+        <li>Steel’s main text on tacking (p. 316) has no words of command at all. His seamanship is a compilation: most of it translates the French author Bourdé de Villehuet, and the rough-sea method is Hutchinson’s. The words in his column come from his glossary and from Gower.</li>
+        <li>Totten, Luce and Dana are one American textbook tradition, close to word for word in places, and should not be counted as three witnesses.</li>
+      </ul>
+
+      <h3>What the later books add</h3>
+      <p>More preparatory orders (“Ready! Ready! Ease down the helm!”). A cautionary “Haul taut!” before each haul. Overhauling the lifts and trusses in stays, which is not in Lever. And “Up mainsail” when the mainsail is hauled up for the tack, with “Main-topsail haul!” in place of “Mainsail haul!” (Alston; Totten’s glossary).</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="missing-stays" data-manoeuvre="missing-stays">
+    <div class="mv-notes">
+      <h3>The remedies, mildest first</h3>
+      <ol>
+        <li>She stops before the main yard is hauled: flat in the head sheets, take the mizen off her, get way on and try again, or wear.</li>
+        <li>Short-handed: get the mainsail hauled anyway and let her go round before the wind, as in the steps above. The RN of the 1860s calls this letting her “go round on her heel”.</li>
+        <li>Man-of-war: “When a man of war, or other ship, having plenty of hands on board, will not stay, she is box-hauled” (Lever p. 93). Steel: “if you should miss stays, you must proceed according to the second method of veering, called boxhauling.”</li>
+        <li>No room for any of it: club-haul.</li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="chapter" id="flatting-in" data-manoeuvre="flatting-in"></section>
+  <section class="chapter" id="taken-aback" data-manoeuvre="taken-aback"></section>
+  <section class="chapter" id="half-board" data-manoeuvre="half-board"></section>
+
+  <section class="chapter" id="wearing" data-manoeuvre="wearing">
+    <div class="mv-notes">
+      <h3>Twelve points against twenty</h3>
+      <svg id="points-rose" viewBox="-130 -108 260 216" role="img" aria-label="Compass showing twelve points turned through in tacking and twenty in wearing"></svg>
+      <p>Lever draws two compasses to make the point. Tacking from north round to SE, through the wind at ENE, “she had only to move twelve points from her first position, and… till she came head to wind she was gaining considerably to windward”. Wearing from SE back to north “is twenty points, being eight points (or one-fourth) of the compass more”, and all of it run off to leeward.</p>
+
+      <h3>What each sail is doing</h3>
+      <ul>
+        <li>Taking in the mizen and mizen staysail and shivering the mizen topsail removes the sails “at the after extremity of the ship”, whose effect is to hold her head up, so that the head sails can pay her off.</li>
+        <li>The after yards are braced in as she falls off, so that they keep their trim to the wind and do not press her stern round against the turn.</li>
+        <li>Before the wind “the head sails… will be at this time becalmed by the after ones”, which is the moment to shift the head sheets and get the new fore tack down.</li>
+        <li>Once the wind is on the new quarter, the mizen is the lever that brings her to.</li>
+      </ul>
+
+      <h3>Other ways of doing it</h3>
+      <ul>
+        <li>Steel p. 321 (from Bourdé), “To veer a ship without losing the wind out of her sails”: mainsail and mizen hauled up and the mizen topsail shivering, but the fore and main yards kept exactly trimmed to the wind all the way round, to keep her speed and with it the power of the rudder.</li>
+        <li>Under courses in a gale (Lever p. 87): the mizen topsail and crossjack yards are squared first; the main tack and bowline are eased and the weather clew-garnet hauled up before the lee one; the main and main topsail yards are squared and the helm put a-weather; the fore bowline is let go and the weather head braces gathered in as she falls off.</li>
+        <li>Under bare poles (Lever p. 90): a hawser with a buoy is veered over the lee quarter to drag the stern up to windward; Steel sends men into the weather fore shrouds.</li>
+        <li>A footnote in Luce (USN, 1866), garbled in the scan, appears to say that “Ready about” is “sometimes, though improperly, given” for wearing.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="box-hauling" data-manoeuvre="box-hauling">
+    <div class="mv-notes">
+      <h3>The mechanics in one paragraph</h3>
+      <p>A normal wear needs sea room because the ship is sailing ahead the whole time she is turning. In box-hauling the first part of the turn is made going astern. The squared after sails drive her astern, the backed head sails throw the bow off, and the rudder, which was put down to luff, is already in the right position to help once the flow over it reverses. She pivots “on her heel” (Lever p. 95) until the wind is abaft the beam, and only then gathers headway and finishes like a wear. This summary is mine, from Lever and Steel.</p>
+
+      <h3>Where the authors differ</h3>
+      <ul>
+        <li>Steel p. 323 does everything at once: “Briskly, and at the same instant, haul up both the main sail and the mizen; shiver the main and mizen topsails; put the helm hard a-lee; raise the fore tack; let go the head bowlines, and brace about the head yards sharp the other way; and let the jib and staysail sheets go”. He shivers the after topsails where Lever squares them aback, and squares them only once she has fallen off 90°, “to give the ship a little way”. Then, for “absolute danger”, he gives Lever’s version: “brace all the sails a-back, observing not to brace the after sails more than square”.</li>
+        <li>Jib sheets: Steel lets them go, “because they tend to draw the ship a-head”; Lever hauls the weather sheet over; Totten has “Haul flat aft the head sheets!”</li>
+        <li>Totten (USN, 1862) separates two things that Lever runs together. Box-hauling proper starts by luffing. “Wearing short round” skips the luff: “put the helm hard up, square the after yards, and brace abox the head yards. The moment she loses her headway, shift the helm for sternboard.”</li>
+        <li>As a last resort to avoid a collision under bare poles, Lever (p. 90) runs the topsail yards half up, braces the head yards “sharp aback” and the after yards square, and puts the helm hard a-lee.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chapter" id="club-hauling" data-manoeuvre="club-hauling">
+    <div class="mv-notes">
+      <p>Steel’s second method uses a kedge on the lee bow, with its hawser brought to an after port, in place of the bower anchor.</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="heaving-to" data-manoeuvre="heaving-to">
+    <div class="mv-notes">
+      <h3>If the weather ship drives down on the lee one</h3>
+      <p>Lever p. 94: “the weather ship braces her mizen topsail sharp aback, squares the head yards, drops her mainsail, and claps her helm hard a port or a weather… The head yards being square, drive her a-stern: the after ones with the assistance of the mainsail, greatly add to the sternway, and keep her head to”. To take way off a ship for sounding, he brings her gradually to the wind, brails up the mizen and mizen staysail, and squares the mizen topsail aback.</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="reefing" data-manoeuvre="reefing">
+    <div class="mv-notes">
+      <p>Two later practices are not in Lever: reefing in stays (“’Bout ship and reef topsails!”, Luce) and the pipe “reef topsails” as a harbour drill against the clock (Boyd).</p>
+    </div>
+  </section>
+
+  <section class="chapter" id="shaking-out" data-manoeuvre="shaking-out"></section>
+  <section class="chapter" id="taking-in" data-manoeuvre="taking-in"></section>
+  <section class="chapter" id="clearing-for-action" data-manoeuvre="clearing-for-action"></section>
+  <section class="chapter" id="heavy-weather" data-manoeuvre="heavy-weather"></section>
+  <section class="chapter" id="anchoring" data-manoeuvre="anchoring"></section>
+  <section class="chapter" id="weighing" data-manoeuvre="weighing"></section>
+
+  <section class="prose closing">
+    <h2>How far to trust this page</h2>
+    <p>The sequences come from the research notes for this strand and, for Lever, from the text of the second edition of 1819, which I read for tacking, flatting in, wearing, being taken aback, missing stays, box-hauling, club-hauling, heaving to, reefing, taking in sail, lying to, anchoring and casting. The notes had read the New York edition of 1843. The two agree almost everywhere; where they differ (which mizen topsail brace is hauled in wearing; “driver” for “spanker”) the page follows 1819. Quotations from the other authors are as the research notes give them, and I did not re-read those books except Steel on casting, the viol and the half-board.</p>
+    <p>Things the sources do not settle, said once more in one place: no period station bill and no numbers of men; almost no spoken orders in Lever or Steel beyond the four for tacking; the timing of “mainsail haul”; which clew of a topgallant sail to start first; what a harbour furl looked like; and whether “fighting sail” ever meant topsails alone. The half-board and the recovery after boxing off rest on one sentence of Steel each.</p>
+    <p>The deck plans use the leads drawn on the <a href="square-sails.html">square sails</a> page. Headsail sheets, staysail gear, the mizen’s brails, backstays and ground tackle have no drawn lead here and are named in the text only.</p>
+
+    <h2>Sources</h2>
+    <ul class="sources">
+      <li>Darcy Lever, <i>The Young Sea Officer’s Sheet Anchor</i> (1808; 2nd ed. 1819), read in the <a href="https://archive.org/details/youngseaofficers00leve_0">1827 reprint at archive.org</a>. British; pp. 53, 71–111 and the dictionary of sea terms.</li>
+      <li>David Steel, <i>The Elements and Practice of Rigging and Seamanship</i> (1794). <a href="https://maritime.org/doc/steel/">Transcription at maritime.org</a>, part 10, “Practice of working ships”. A compilation, much of it translated from Bourdé de Villehuet.</li>
+      <li>William Falconer, <i>An Universal Dictionary of the Marine</i> (1769); J. J. Moore, <i>The Midshipman’s or British Mariner’s Vocabulary</i> (1801, read in the 1805 printing); William Hutchinson, <i>A Treatise on Practical Seamanship</i> (1777); R. H. Gower, <i>A Treatise on the Theory and Practice of Seamanship</i> (1793). British, in or just before the period.</li>
+      <li>Later Royal Navy: W. N. Glascock, <i>The Naval Service</i> (1836); J. M. Boyd, <i>A Manual for Naval Cadets</i> (1857); A. H. Alston, <i>Seamanship</i> (1860); G. S. Nares, <i>Seamanship</i> (1862); W. H. Smyth, <i>The Sailor’s Word-Book</i> (1867).</li>
+      <li>Later American: R. H. Dana, <i>The Seaman’s Friend</i> (1841, merchant); W. Brady, <i>The Kedge-Anchor</i> (1848, USN); B. J. Totten, <i>Naval Text-Book</i> (1862, USN); S. B. Luce, <i>Seamanship</i> (1866, USN).</li>
+      <li>Secondary: John Masefield, <i>Sea Life in Nelson’s Time</i> (1905); Sam Willis, “The Capability of Sailing Warships, Part 1: Windward Performance”, <i>The Northern Mariner</i> XIII no. 4 (2003). John Harland’s <i>Seamanship in the Age of Sail</i> and Brian Lavery’s books, the likeliest places to settle the open questions, were not reached.</li>
+    </ul>
+  </section>
+
+  <nav id="pager"></nav>
+
+  <script src="js/site.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/sails-courses.js"></script>
+  <script src="js/sails-topsails.js"></script>
+  <script src="js/sails-upper.js"></script>
+  <script src="js/manoeuvres-data.js"></script>
+  <script src="js/context.js"></script>
+  <script src="js/figure.js"></script>
+  <script src="js/manoeuvres.js"></script>
+</body>
+</html>

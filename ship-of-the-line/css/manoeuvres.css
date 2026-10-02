@@ -1,0 +1,146 @@
+/* The manoeuvres page: a drawing of the ship from above beside each order.
+   Colours are the shared tokens: red for what is hauled and for a sail aback,
+   green for way through the water and for belaying points. */
+
+.manoeuvres .legend { max-width: 1480px; margin: 0 auto; padding: 10px clamp(16px, 3vw, 44px) 0; border-top: 0; line-height: 2.2; }
+.manoeuvres .legend svg { width: 44px; height: 18px; flex: none; overflow: visible; }
+
+.manoeuvres .chapter { max-width: 1480px; margin: 72px auto 0; padding: 0 clamp(16px, 3vw, 44px); scroll-margin-top: 8px; }
+.mv-source { font: 400 0.84rem/1.55 var(--sans); color: var(--soft); }
+.mv-source b { color: var(--ink); font-weight: 600; margin-right: 0.3em; }
+
+.mv { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(0, 0.88fr); gap: clamp(20px, 3vw, 48px); align-items: start; margin-top: 22px; }
+.mv-left { position: sticky; top: 8px; display: flex; flex-direction: column; gap: 10px; }
+.mv-top { display: grid; grid-template-columns: minmax(0, min(54vh, 64%)) minmax(0, 1fr); gap: 14px; align-items: start; }
+.mv figure { margin: 0; }
+.mv-ship svg, .mv-plan svg, .mv-track { display: block; width: 100%; background: var(--sheet); border: 1px solid var(--rule); }
+.mv-ship svg { aspect-ratio: 1; }
+.mv-plan svg { aspect-ratio: 276 / 102; max-height: 30vh; }
+.mv-track { aspect-ratio: 1; max-width: 190px; }
+.mv-plan figcaption { padding-top: 5px; font: 400 0.76rem/1.5 var(--sans); color: var(--soft); }
+.mv-plan g.line { cursor: default; }
+
+/* Inside the drawing of the ship */
+.mv-ship .hull { stroke-width: 1px; }
+.mv-stream { stroke: var(--rule); stroke-width: 0.5; stroke-dasharray: 2 7; }
+.mv-wind { stroke: var(--ink); stroke-width: 2; }
+.mv-wind-head { fill: var(--ink); }
+.mv-lbl { font: 500 9px var(--sans); fill: var(--soft); }
+.mv-tlbl { font: 500 6.5px var(--sans); fill: var(--soft); }
+.mv-shore { fill: var(--hemp); opacity: 0.45; }
+.mv-sail { stroke: var(--soft); stroke-width: 0.8; stroke-linejoin: round; fill: var(--sail); }
+.mv-sail.full { fill: var(--sail); }
+.mv-sail.aback { fill: #e9c3bc; stroke: var(--red); stroke-width: 1.1; }
+.mv-sail.shiver { fill: none; stroke: var(--ink); stroke-width: 0.9; }
+.mv-sail.fa.shiver { stroke-dasharray: 3 2; }
+.mv-sail.becalmed { fill: var(--rule); stroke: var(--soft); stroke-dasharray: 2 2; }
+.mv-hung { stroke: var(--hemp); stroke-linecap: round; }
+.mv-rudder { stroke: var(--red); stroke-width: 3.4; stroke-linecap: round; }
+.mv-tiller { stroke: var(--red); stroke-width: 1.3; stroke-linecap: round; }
+.mv-way { stroke: var(--green); stroke-width: 2; fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.mv-cable { stroke: var(--hemp); stroke-width: 1.6; stroke-dasharray: 5 3; }
+
+/* Her track */
+.mv-path { fill: none; stroke: var(--green); stroke-width: 1.2; stroke-linejoin: round; }
+.mv-path.ahead { stroke: var(--rule); stroke-dasharray: 2 2; }
+.mv-dot { fill: var(--green); }
+.mv-dot.ahead { fill: var(--rule); }
+.mv-boat { fill: var(--sheet); stroke: var(--ink); stroke-width: 0.9; stroke-linejoin: round; }
+
+.mv-readout { margin: 8px 0 6px; font: 400 0.8rem/1.45 var(--sans); color: var(--soft); }
+.mv-readout b { color: var(--ink); font-weight: 600; }
+.mv-sails { font: 400 0.76rem/1.4 var(--sans); }
+.mv-sails table { width: 100%; border-collapse: collapse; }
+.mv-sails th { text-align: left; font-weight: 500; color: var(--soft); padding: 2px 6px 2px 0; }
+.mv-sails td { padding: 2px 6px 2px 0; border-top: 1px solid var(--rule); }
+.mv-sails tbody th { border-top: 1px solid var(--rule); }
+.mv-sails p { margin: 6px 0 0; display: flex; flex-wrap: wrap; gap: 2px 12px; }
+.mv-sails .aback { color: var(--red); font-weight: 600; }
+.mv-sails .shiver { font-style: italic; }
+.mv-sails .becalmed, .mv-sails .in, .mv-sails .none, .mv-sails .hung { color: var(--soft); }
+
+/* The order and what is done */
+.mv-orders { list-style: none; margin: 0 0 10px; padding: 0; display: flex; flex-wrap: wrap; gap: 5px; counter-reset: order; }
+.mv-orders li { counter-increment: order; }
+.mv-orders button, .mv-nav button { font: 500 0.78rem/1.2 var(--sans); color: var(--ink); background: transparent; border: 1px solid var(--rule); border-radius: 2px; padding: 6px 9px; cursor: pointer; text-align: left; }
+.mv-orders button::before { content: counter(order) ' '; color: var(--soft); }
+.mv-orders button:hover, .mv-nav button:hover:not(:disabled) { border-color: var(--ink); }
+.mv-orders button[aria-pressed='true'] { background: var(--red); border-color: var(--red); color: #fff; }
+.mv-orders button[aria-pressed='true']::before { color: #fff; }
+.mv-nav { display: flex; align-items: center; gap: 8px; padding: 8px 0 12px; border-top: 1px solid var(--ink); position: sticky; top: 0; background: var(--paper); z-index: 1; }
+.mv-nav button { border-color: var(--ink); padding: 8px 12px; }
+.mv-nav button:disabled { opacity: 0.35; cursor: default; }
+.mv-count { font: 400 0.78rem var(--sans); color: var(--soft); }
+
+.mv-step { max-width: 60ch; font-size: 0.97rem; line-height: 1.6; }
+.mv-kicker { margin: 0; font: 500 0.78rem/1.4 var(--sans); color: var(--soft); }
+.mv-order { margin: 0.2rem 0 0.4rem; font-weight: 400; font-size: clamp(1.7rem, 2.6vw, 2.4rem); line-height: 1.1; letter-spacing: -0.01em; color: var(--red); }
+.mv-order.plain { font-style: italic; font-size: clamp(1.35rem, 2vw, 1.7rem); color: var(--ink); }
+.mv-from { margin: 0 0 0.5rem; font: 400 0.8rem/1.5 var(--sans); color: var(--soft); }
+.mv-variants { list-style: none; margin: 0 0 0.9rem; padding: 0 0 0 12px; border-left: 2px solid var(--rule); font-size: 0.92rem; }
+.mv-variants li { margin: 0 0 0.15rem; }
+.mv-variants span, .mv-at { font: 400 0.76rem/1.4 var(--sans); color: var(--soft); }
+.mv-at::before { content: '· '; }
+.mv-step p { margin: 0 0 0.6rem; }
+.mv-step h5 { margin: 1rem 0 0.15rem; font: 600 0.76rem/1.3 var(--sans); color: var(--soft); }
+.mv-linebox { margin: 0.9rem 0; padding: 2px 12px 10px; background: var(--sheet); border: 1px solid var(--rule); }
+.mv-lines h5 { color: var(--ink); }
+.mv-lines.haul h5 { color: var(--red); }
+.mv-lines ul, .mv-men { margin: 0; padding: 0; list-style: none; font: 400 0.84rem/1.5 var(--sans); }
+.mv-lines li, .mv-men li { margin-bottom: 0.2rem; }
+.mv-lines b, .mv-men b { font-weight: 600; }
+
+/* Lines on the deck plan, sorted out after the shared engine has drawn them */
+.mv-plan .rope.sel.mv-letGo { stroke: var(--ink); stroke-dasharray: 2 4; }
+.mv-plan .rope.sel.mv-ease { stroke: var(--ink); stroke-dasharray: 8 4; }
+.mv-plan .rope.sel.mv-show { stroke: var(--green); }
+.mv-k { width: 26px !important; height: 0 !important; border-top: 2px solid var(--red); }
+.mv-k.letGo { border-top: 2px dotted var(--ink); }
+.mv-k.ease { border-top: 2px dashed var(--ink); }
+
+/* Notes under each step-through */
+.mv-notes { max-width: 1480px; margin-top: 36px; }
+.mv-notes > * { max-width: 68ch; }
+.mv-notes h3 { margin: 1.8rem 0 0.3rem; font-weight: 700; font-size: 1.08rem; }
+.mv-notes p { margin: 0 0 0.9rem; }
+.mv-notes ul, .mv-notes ol { padding-left: 1.2rem; margin: 0 0 0.9rem; }
+.mv-notes li { margin-bottom: 0.45rem; }
+.mv-notes .wide { max-width: none; overflow-x: auto; }
+.mv-table { border-collapse: collapse; font: 400 0.82rem/1.45 var(--sans); margin: 0.4rem 0 1.2rem; }
+.mv-table th, .mv-table td { text-align: left; vertical-align: top; padding: 6px 14px 6px 0; border-top: 1px solid var(--rule); }
+.mv-table thead th { border-top: 0; font-weight: 600; white-space: nowrap; }
+.mv-table tbody th { font-weight: 500; white-space: nowrap; }
+.mv-table.orders td { min-width: 9.5rem; }
+.mv-table .later { color: var(--soft); }
+
+#points-rose { display: block; width: min(100%, 420px); margin: 0.6rem 0 1rem; background: var(--sheet); border: 1px solid var(--rule); }
+.mv-rose { fill: none; stroke: var(--soft); stroke-width: 0.7; }
+.mv-arc { fill: none; stroke-width: 4; stroke-linecap: round; }
+.mv-arc.tack, .mv-lbl.tack { stroke: var(--green); }
+.mv-arc.wear, .mv-lbl.wear { stroke: var(--red); }
+.mv-lbl.tack { fill: var(--green); stroke: none; }
+.mv-lbl.wear { fill: var(--red); stroke: none; }
+
+.manoeuvres .prose.intro { max-width: 1480px; margin: 40px auto 0; padding: 0 clamp(16px, 3vw, 44px); }
+.manoeuvres .prose.intro > * { max-width: 68ch; }
+.manoeuvres .prose.intro .wide { max-width: none; overflow-x: auto; }
+
+@media (max-width: 1020px) {
+  .mv { grid-template-columns: minmax(0, 1fr); }
+  .mv-left { position: static; display: contents; }
+  .mv-top { order: 1; grid-template-columns: minmax(0, min(62vh, 60%)) minmax(0, 1fr); }
+  .mv-right { order: 2; }
+  .mv-plan { order: 3; }
+}
+@media (max-width: 640px) {
+  .mv-top { grid-template-columns: minmax(0, 1fr); }
+  .mv-side { display: grid; grid-template-columns: 96px minmax(0, 1fr); gap: 0 12px; }
+  .mv-track { grid-row: span 2; }
+  .mv-readout { margin-top: 0; }
+  .mv-order { font-size: 1.6rem; }
+  .mv-nav { top: 0; }
+}
+
+/* The list of evolutions is long: start the masthead at the top and set the list in columns. */
+.masthead { align-items: start; }
+.masthead .contents { columns: 2; column-gap: 2.5rem; padding-top: clamp(1rem, 4vw, 3rem); }

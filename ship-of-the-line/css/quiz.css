@@ -1,0 +1,19 @@
+/* The quiz: one question at a time, in a single column. */
+.quiz { max-width: 46rem; margin: 0 auto 0 0; padding-top: 12px; }
+.quiz .chip-row { border-top: 1px solid var(--ink); padding-top: 14px; }
+.quiz .chip-row h3 { min-width: 5em; }
+#question { margin-top: 2rem; }
+.prompt { margin: 0 0 1rem; font-size: 1.3rem; line-height: 1.4; }
+.options { display: grid; gap: 6px; }
+.options label { display: flex; gap: 10px; align-items: baseline; padding: 9px 12px; border: 1px solid var(--rule); background: var(--sheet); cursor: pointer; }
+.options label:hover { border-color: var(--ink); }
+.options label.is-right { border-color: var(--green); box-shadow: inset 4px 0 0 var(--green); }
+.options label.is-wrong { border-color: var(--red); box-shadow: inset 4px 0 0 var(--red); }
+.options label.is-neutral { opacity: 0.6; }
+.options input { accent-color: var(--red); }
+.after { margin-top: 1.2rem; }
+.after button { font: 500 0.9rem/1 var(--sans); color: #fff; background: var(--ink); border: 0; border-radius: 2px; padding: 11px 16px; cursor: pointer; }
+.verdict { margin: 0 0 0.3rem; font-weight: 700; font-size: 1.15rem; }
+.verdict.good { color: var(--green); }
+.verdict.bad { color: var(--red); }
+.score { margin-top: 2rem; font: 500 0.85rem/1.5 var(--sans); color: var(--soft); }

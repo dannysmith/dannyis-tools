@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rigging a ship of the line</title>
+  <meta name="description" content="Trace every rope of a Royal Navy 74-gun ship of about 1805 from sail to deck, and step through tacking, wearing and reefing order by order.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/home.css">
+</head>
+<body class="reading">
+  <nav id="site"></nav>
+  <header class="masthead">
+    <div>
+      <h1>Rigging a ship of the line</h1>
+      <p class="series">The running rigging and sail handling of a Royal Navy 74, about 1805</p>
+      <p class="standfirst">Which rope did what, how it was led, where it came to hand, and what the crew did with it when an order was given. Written for someone who knows the masts and sails from the novels and wants to know what “mainsail haul” actually set in motion.</p>
+    </div>
+  </header>
+
+  <svg id="hero" role="img" aria-label="A 74-gun ship in profile, bow to the right"></svg>
+
+  <main class="home">
+    <ol class="pages">
+      <li><a href="ship.html">The ship</a><p>Spars, sails and standing rigging, as a reference to flip back to. Which sails were set when, and what was new or going out of use in 1805.</p></li>
+      <li><a href="fundamentals.html">Tackles, yards and belaying</a><p>How a purchase multiplies force, how yards are slung and hoisted, and what “belay” meant in practice.</p></li>
+      <li><a href="square-sails.html">The square sails</a><p>Every rope of the main topsail, sorted by the job it does; then the course, the topgallants and royals, and what changes from mast to mast.</p></li>
+      <li><a href="fore-and-aft.html">Fore-and-aft sails</a><p>Jibs and staysails, the mizen and the driver, and the spritsail under the bowsprit.</p></li>
+      <li><a href="studding-sails.html">Studding sails</a><p>The booms, the gear, and how one is set and taken in.</p></li>
+      <li><a href="belaying.html">The belaying plan</a><p>Where every line comes down, on one deck plan, and the pattern in it.</p></li>
+      <li><a href="handling.html">Steering and sailing theory</a><p>Wheel, tiller and rudder; why “starboard the helm” turned the ship to port; how close she lay to the wind.</p></li>
+      <li><a href="manoeuvres.html">Manoeuvres</a><p>Making sail, tacking, wearing, box-hauling, heaving to, reefing and the rest, order by order.</p></li>
+      <li><a href="quiz.html">Quiz</a><p>Find the right rope.</p></li>
+    </ol>
+    <p class="also-pages">For looking things up: the <a href="glossary.html">glossary</a>, with period spellings, and the <a href="explorer.html">lookup page</a>, where any line of any sail can be traced on its own.</p>
+
+    <section class="prose">
+      <h2>How to read the drawings</h2>
+      <p>The ship is the 74 of David Steel’s tables of 1794, rigged as she would have been about 1805. Running rigging is drawn the colour of hemp, standing rigging dark, and the line being discussed in red, with numbered points that match the numbered steps of its lead in the text. A green point is where it belays.</p>
+      <p>A solid line is a lead that Steel or Lever describes. A dashed line and a hollow point mark a position neither gives, where the drawing shows my best guess. The text says so each time.</p>
+
+      <h2>What this rests on, and where it is thin</h2>
+      <p>The leads come from two period manuals: David Steel’s <i>Elements and Practice of Rigging and Seamanship</i> (1794), which has tables of rigging for a 74, and Darcy Lever’s <i>Young Sea Officer’s Sheet Anchor</i> (1808; quoted from the 1819 text). William Falconer’s <i>Universal Dictionary of the Marine</i> (1769) supplies definitions. The manoeuvres draw also on Hutchinson (1777), Gower (1793) and Moore (1801), and, for the wording of orders that the period books do not record, on later manuals of the 1830s to 1860s, some of them American. Those are labelled wherever they are used.</p>
+      <p>Three things are thinner than they look:</p>
+      <ul>
+        <li><b>Belaying points.</b> Steel and Lever often say only “upon deck”. The modern authorities who fill those gaps, above all James Lees, could not be read for this, so the gaps are shown as gaps.</li>
+        <li><b>Numbers of men.</b> No source found says how many hands went to any rope. Who was stationed where is mapped from later station bills and is marked as inference.</li>
+        <li><b>Heights.</b> Spar lengths are Steel’s. The heights of the decks above the water, and so of everything aloft, are estimates good to a few feet.</li>
+      </ul>
+    </section>
+  </main>
+
+  <nav id="pager"></nav>
+
+  <script src="js/site.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/sails-topsails.js"></script>
+  <script src="js/context.js"></script>
+  <script src="js/figure.js"></script>
+  <script>
+    // The opening drawing: the ship in profile, with nothing picked out.
+    RIGFIG.create(document.getElementById('hero'), { view: 'side', sail: { mast: 'main', noSail: true }, lines: RIGDATA.SAILS.flatMap((s) => s.lines) });
+  </script>
+</body>
+</html>

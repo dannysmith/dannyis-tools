@@ -1,0 +1,104 @@
+/* ship.html: the reference sail plan and its tables, and the close-up
+   sketches inside the standing-rigging chapters. Colours and type come from
+   style.css. */
+
+.contents-ref { margin: 0 0 0.5rem; font-size: 0.98rem; }
+.contents-ref a { text-decoration: none; border-bottom: 1px solid var(--hemp); }
+
+.reference { max-width: 1480px; margin: 0 auto; padding: 0 clamp(16px, 3vw, 44px); }
+.controls { border-top: 1px solid var(--ink); padding: 14px 0 4px; display: flex; flex-wrap: wrap; gap: 0 40px; }
+.controls .chip-row h3 { min-width: 0; }
+.controls .chip-row[hidden] { display: none; }
+.controls button { display: inline-flex; align-items: center; gap: 7px; }
+.controls button[aria-pressed='false'] { color: var(--soft); border-color: var(--rule); }
+.controls button[aria-pressed='false'] .swatch { opacity: 0.35; }
+#plan-filter button[aria-pressed='true'] { background: var(--sheet); border-color: var(--ink); color: var(--ink); }
+
+.plan-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(280px, 360px); gap: 28px; align-items: start; }
+.plan-fig { margin: 0; }
+.plan-scroll { overflow-x: auto; }
+#plan { display: block; width: 100%; min-width: 720px; height: auto; background: var(--sheet); border: 1px solid var(--rule); }
+.plan-fig figcaption { max-width: 78ch; padding-top: 8px; font: 400 0.8rem/1.5 var(--sans); color: var(--soft); }
+.plan-fig figcaption p { margin: 0 0 0.5rem; }
+
+#info .hint { font-style: italic; color: var(--soft); }
+#info .size { font: 400 0.84rem/1.5 var(--sans); }
+#info h2 { margin-bottom: 0.4rem; }
+
+/* How often a sail was set: one mark, used on the drawing, the buttons and the tables. */
+.status, .swatch { display: inline-block; }
+.status { padding: 1px 7px; font: 500 0.74rem/1.6 var(--sans); border: 1px solid var(--soft); background: var(--sail); white-space: nowrap; }
+.swatch { width: 18px; height: 11px; border: 1px solid var(--soft); background: var(--sail); }
+.status.s-fair, .swatch.s-fair { background: #eef0e6; }
+.status.s-light, .swatch.s-light { border-style: dashed; background: transparent; }
+.status.s-going, .swatch.s-going { border-style: dotted; border-color: var(--red); background: transparent; }
+.status.s-none { border-color: var(--rule); background: transparent; color: var(--soft); }
+
+/* Inside the sail plan */
+#plan .item, #plan .pick { cursor: pointer; outline: none; }
+#plan .hit { stroke: transparent; stroke-width: 12px; vector-effect: non-scaling-stroke; }
+#plan .hit-dot { fill: transparent; }
+#plan .spar-seg { stroke: var(--wood); stroke-linecap: round; }
+#plan .dashed .spar-seg { stroke-dasharray: 2 1.6; stroke-linecap: butt; }
+#plan .item.on .spar-seg { stroke: var(--red); }
+#plan .item.on .spar { fill: var(--red); }
+#plan .cloth { fill: var(--sail); fill-opacity: 0.82; stroke: var(--soft); stroke-width: 0.9px; vector-effect: non-scaling-stroke; stroke-linejoin: round; }
+#plan .s-fair .cloth { fill: #eef0e6; fill-opacity: 0.6; }
+#plan .s-light .cloth { fill-opacity: 0.22; stroke-dasharray: 5 3; }
+#plan .s-going .cloth { fill-opacity: 0.12; stroke: var(--red); stroke-dasharray: 1.5 3; }
+#plan .k-studding .cloth { fill-opacity: 0.1; }
+#plan .edge-on { fill: none; stroke-width: 2px; }
+#plan .item.on .cloth { fill: #f3d9d3; fill-opacity: 0.9; stroke: var(--red); stroke-width: 2px; stroke-dasharray: none; }
+#plan .item:focus-visible .cloth, #plan .item:focus-visible .spar-seg { stroke: var(--red); }
+#plan .pick.on { fill: var(--red); font-weight: 600; }
+#plan .pick { fill: var(--ink); }
+#plan .context .lbl { display: none; }
+
+#plan[data-mode='spars'] .sails-layer, #plan[data-mode='spars'] .sail-labels { display: none; }
+#plan[data-mode='sails'] .spar-labels, #plan[data-mode='sails'] .boom, #plan[data-mode='sails'] .old { display: none; }
+#plan[data-mode='sails'] .spars-layer { pointer-events: none; }
+#plan.hide-routine .s-routine, #plan.hide-fair .s-fair, #plan.hide-light .s-light, #plan.hide-going .s-going { display: none; }
+
+/* The two tables */
+.tables { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 clamp(28px, 5vw, 72px); margin-top: 40px; }
+.tables h2 { margin: 0 0 0.4rem; padding-top: 0.9rem; border-top: 1px solid var(--ink); font-weight: 400; font-size: 1.6rem; line-height: 1.15; letter-spacing: -0.01em; }
+.tables p { max-width: 62ch; margin: 0 0 0.9rem; font-size: 0.94rem; line-height: 1.55; }
+table.ref { width: 100%; border-collapse: collapse; font: 400 0.82rem/1.35 var(--sans); }
+table.ref th, table.ref td { padding: 4px 10px 4px 0; text-align: left; vertical-align: top; border-top: 1px solid var(--rule); }
+table.ref thead th { border-top: 0; font-weight: 600; color: var(--soft); }
+table.ref tbody th { font-weight: 500; }
+table.ref .group th { padding-top: 14px; border-top: 0; font: italic 400 0.98rem var(--serif); color: var(--soft); }
+table.ref tr[data-id] { cursor: pointer; }
+table.ref tr[data-id]:hover th, table.ref tr[data-id]:focus-visible th { color: var(--red); }
+table.ref .note { display: block; font-weight: 400; color: var(--soft); }
+table.ref td .note { display: inline; margin-left: 8px; }
+
+/* Close-up sketches in the chapters */
+.inset { margin: 0.8rem 0 1rem; max-width: 560px; }
+.inset svg { display: block; width: 100%; height: auto; background: var(--sheet); border: 1px solid var(--rule); }
+.inset figcaption { padding-top: 5px; font: 400 0.76rem/1.4 var(--sans); color: var(--soft); }
+.chapter > header .inset { max-width: 760px; }
+.inset .ink { fill: none; stroke: var(--ink); stroke-width: 1px; vector-effect: non-scaling-stroke; opacity: 0.75; }
+.inset .ink.thin { stroke-width: 0.8px; opacity: 0.6; }
+.inset .ink.thick { stroke-width: 4px; opacity: 0.8; }
+.inset .iron { stroke: var(--ink); stroke-width: 3px; vector-effect: non-scaling-stroke; }
+.inset .eye { fill: var(--wood); stroke: var(--ink); stroke-width: 1px; vector-effect: non-scaling-stroke; }
+.inset .hole { fill: var(--sheet); stroke: var(--ink); stroke-width: 0.6px; vector-effect: non-scaling-stroke; }
+.inset .leader, .leader { fill: none; stroke: var(--soft); stroke-width: 0.6px; vector-effect: non-scaling-stroke; }
+.inset .guess { stroke-dasharray: 2 1.6; stroke-linecap: butt; }
+.inset .axis { stroke: var(--rule); stroke-width: 1px; vector-effect: non-scaling-stroke; stroke-dasharray: 8 5; }
+.inset .cut { fill: var(--ink); opacity: 0.75; }
+.inset .yard { stroke: var(--wood); stroke-width: 7px; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+.inset .yard.ghost { opacity: 0.22; }
+.inset .wind { fill: none; stroke: var(--red); stroke-width: 1.6px; vector-effect: non-scaling-stroke; stroke-linecap: round; }
+
+.counts { border-collapse: collapse; margin: 0.4rem 0 0.9rem; font: 400 0.84rem/1.4 var(--sans); }
+.counts th, .counts td { padding: 4px 18px 4px 0; text-align: left; border-top: 1px solid var(--rule); }
+.counts thead th, .counts thead td { border-top: 0; font-weight: 600; color: var(--soft); }
+.counts tbody th { font-weight: 500; }
+
+@media (max-width: 1020px) {
+  .plan-grid { grid-template-columns: minmax(0, 1fr); }
+  .tables { grid-template-columns: minmax(0, 1fr); }
+  #info { min-height: 9rem; }
+}
